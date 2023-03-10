@@ -6,15 +6,15 @@
 
 * Motivation: 
 
-* Paper related:
+* Papers related:
 
 ** SMC
   - [[https://ui.adsabs.harvard.edu/abs/2015MNRAS.452.1402D/abstract][Drašković, D. et. al 2015]] paper in which are reported four new Planetary Nebula.
-    Are in the  [[Four-PNe-SMC-2015.csv][table]].
+    Are in the [[Four-PNe-SMC-2015.csv][table]].
      
 ** Galaxy
   - [[https://ui.adsabs.harvard.edu/abs/2013MNRAS.431....2F/abstract][Paper]] about integrated Hα fluxes for 1258 Galactic planetary nebulae.
-  - [[Thishttps://ui.adsabs.harvard.edu/abs/2016MNRAS.455.1459F/abstract][This]] is about the Hα surface brightness-radius relation:
+  - [[https://ui.adsabs.harvard.edu/abs/2016MNRAS.455.1459F/abstract][This]] is about the Hα surface brightness-radius relation:
     a robust statistical distance indicator for planetary nebulae. 
 
   
