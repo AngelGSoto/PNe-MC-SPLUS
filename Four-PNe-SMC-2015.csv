@@ -1,0 +1,6 @@
+No.,Object Name,RA,DEC,Type,Velocity,Redshift,Redshift Flag,References,Notes,Photometry Points,Positions,Redshift Points,Diameter Points,"Associations ",Redshift-independent Distances,Classifications,Images,Spectra
+1,"<a HREF=""#"" onclick=""getObjectSearchInfo(jQuery, 2, this); return false;"">Small Magellanic Cloud</a>",13.186588,-72.828599,G,145.600000,0.000486,UUN,3974,9,56,15,6,3,,294,285,100,
+2,"<a HREF=""#"" onclick=""getObjectSearchInfo(jQuery, 2, this); return false;"">SMC:[DPR2015] DPR1</a>",13.608333,-72.516500,PN,,,,1,,,1,,,,,,,
+3,"<a HREF=""#"" onclick=""getObjectSearchInfo(jQuery, 2, this); return false;"">SMC:[DPR2015] DPR2</a>",14.948333,-72.542056,PN,,,,1,,,1,,,,,,,
+4,"<a HREF=""#"" onclick=""getObjectSearchInfo(jQuery, 2, this); return false;"">SMC:[DPR2015] DPR3</a>",15.730000,-72.358889,PN,,,,1,,,1,,,,,,,
+5,"<a HREF=""#"" onclick=""getObjectSearchInfo(jQuery, 2, this); return false;"">SMC:[DPR2015] DPR4</a>",16.125000,-73.252917,PN,,,,1,,,1,,,,,,,

@@ -7,7 +7,15 @@
 * Motivation: 
 
 * Paper related:
-  - 
+
+** SMC
+  - [[https://ui.adsabs.harvard.edu/abs/2015MNRAS.452.1402D/abstract][Drašković, D. et. al 2015]] paper in which are reported four new Planetary Nebula.
+    Are in the  [[Four-PNe-SMC-2015.csv][table]].
+     
+** Galaxy
+  - [[https://ui.adsabs.harvard.edu/abs/2013MNRAS.431....2F/abstract][Paper]] about integrated Hα fluxes for 1258 Galactic planetary nebulae.
+  - [[Thishttps://ui.adsabs.harvard.edu/abs/2016MNRAS.455.1459F/abstract][This]] is about the Hα surface brightness-radius relation:
+    a robust statistical distance indicator for planetary nebulae. 
 
   
 
@@ -26,6 +34,8 @@
     The weak nebular emission of the PNe were also analyzed to investigate the structure of the MC PNe further,
     for which the Halpha surface brightness was estimated. The densities in the nebulae of the PNe were also
     measured using the previously estimated surface brightness.
-    These results were compared with previous measurements from the literature. The preliminary results of this study are present in this contribution.
+    These results were compared with previous measurements from the literature. The preliminary results of
+    this study are present in this contribution.
+
 
 
