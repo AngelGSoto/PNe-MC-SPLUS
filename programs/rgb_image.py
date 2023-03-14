@@ -14,6 +14,8 @@ from astropy import units as u
 from astropy.coordinates import SkyCoord
 import argparse
 import matplotlib.pyplot as plt
+from skimage.restoration import denoise_wavelet, cycle_spin
+from skimage.restoration import estimate_sigma
 from astropy.io import fits
 from astropy.table import Table
 import matplotlib
@@ -65,15 +67,21 @@ parser.add_argument("--debug", action="store_true",
 ############################################################
 def fz2fits(image):
     """
-    It converts SPLUS images
-    from .fz to .fits
+    This converts SPLUS images
+    from .fz to .fits and applies 
+    denoising relies upon
     """
     datos = fits.open(image)[1].data
+    sigma_est = estimate_sigma(datos, average_sigmas=True)
+    # applying  denoise_wavelet, cycle_spin
+    denoised_data = denoise_wavelet(datos, 
+                                 method='VisuShrink', mode='soft',
+                                 sigma=sigma_est/2, rescale_sigma=True)
     heada = fits.open(image)[1].header
     imageout = image[:-2] + 'fits'
     print ('Creating file: ')
     print (imageout)
-    fits.writeto(imageout, datos, heada, overwrite=True)
+    fits.writeto(imageout, denoised_data, heada, overwrite=True)
 
 cmd_args = parser.parse_args()
 file_ = cmd_args.source + ".ecsv"
@@ -92,9 +100,9 @@ for tab in data:
     dec = tab["DEC"]
     Name = tab["SimbadName"]
     # Getting the Fits image in the g, r and i-band
-    hdu_g = conn.get_cut(ra, dec, 150, 'G')
-    hdu_r = conn.get_cut(ra, dec, 150, 'R')
-    hdu_i = conn.get_cut(ra, dec, 150, 'I')
+    hdu_g = conn.get_cut(ra, dec, 60, 'G')
+    hdu_r = conn.get_cut(ra, dec, 60, 'F660')
+    hdu_i = conn.get_cut(ra, dec, 60, 'I')
     # Save the image, note that the output image in compress
     hdu_g.writeto('{}_{}_{}_g.fz'.format(Name, ra, dec), overwrite=True) # write to fits
     hdu_r.writeto('{}_{}_{}_r.fz'.format(Name, ra, dec), overwrite=True)
@@ -102,23 +110,25 @@ for tab in data:
 
 
     # Decompress
-    hdufits_g = fz2fits('{}_{}_{}_g.fz'.format(Name, ra, dec))
-    hdufits_r = fz2fits('{}_{}_{}_r.fz'.format(Name, ra, dec))
-    hdufits_i = fz2fits('{}_{}_{}_i.fz'.format(Name, ra, dec))
+    fz2fits('{}_{}_{}_g.fz'.format(Name, ra, dec))
+    fz2fits('{}_{}_{}_r.fz'.format(Name, ra, dec))
+    fz2fits('{}_{}_{}_i.fz'.format(Name, ra, dec))
 
-    image_r = '{}_{}_{}_i.fits'.format(Name, ra, dec)
-    image_g = '{}_{}_{}_r.fits'.format(Name, ra, dec)
-    image_b = '{}_{}_{}_g.fits'.format(Name, ra, dec)
+    image_r = '{}_{}_{}_i.fz'.format(Name, ra, dec).replace(".fz", ".fits")
+    image_g = '{}_{}_{}_r.fz'.format(Name, ra, dec).replace(".fz", ".fits")
+    image_b = '{}_{}_{}_g.fz'.format(Name, ra, dec).replace(".fz", ".fits")
 
+    
+    
      # # Read the FITS file
     # hdul = fits.open('{}_{}_r.fits'.format(Name, rad))[0]
     # wcs = WCS(hdul.header)          
 
-    hdul_r = fits.open('{}_{}_{}_i.fits'.format(Name, ra, dec))
+    hdul_r = fits.open(image_r)
     instrument_r = hdul_r[0].header['FILTER']
-    hdul_g = fits.open('{}_{}_{}_r.fits'.format(Name, ra, dec))
+    hdul_g = fits.open(image_g)
     instrument_g = hdul_g[0].header['FILTER']
-    hdul_b = fits.open('{}_{}_{}_g.fits'.format(Name, ra, dec))
+    hdul_b = fits.open(image_b)
     instrument_b = hdul_b[0].header['FILTER']
 
 #aplpy.make_rgb_cube(['1000001-JPLUS-01485-v2_iSDSS_swp-crop.fits', '1000001-JPLUS-01485-v2_rSDSS_swp-crop.fits',
@@ -130,7 +140,6 @@ for tab in data:
                                image_r.replace('.fits', '_rgb.png'),
                                       vmin_r=cmd_args.vmin_r, vmax_r=cmd_args.vmax_r, vmin_g=cmd_args.vmin_g,
                                                       vmax_g=cmd_args.vmax_g, vmin_b=cmd_args.vmin_b, vmax_b=cmd_args.vmax_b)
-
 
     # With the mask regions, the file may not exist
     position = cmd_args.position + ".reg"
@@ -238,4 +247,4 @@ for tab in data:
         os.remove('{}_{}_{}_i.fz'.format(Name, ra, dec))
     except FileNotFoundError:
         pass
-    print("FZ File Removed!")
+        print("FZ File Removed!")
