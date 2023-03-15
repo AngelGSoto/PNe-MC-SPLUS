@@ -7,7 +7,7 @@ Autor: L. A. Gutiérrez Soto
 from __future__ import print_function
 import aplpy
 import splusdata 
-import numpy
+import numpy as np
 import sys
 from astropy import coordinates as coord
 from astropy import units as u
@@ -32,9 +32,9 @@ parser.add_argument("source", type=str,
                     default="PN-MC-1arcsec",
                     help="Name of source, taken the prefix ")
 
-# parser.add_argument("--name", type=str,
-#                     default="PSP",
-#                     help="Name of the objet")
+parser.add_argument("--Object", type=str,
+                    default=None,
+                    help="Name of the objet")
 
 parser.add_argument("--vmin_r", type=float, default=None,
                     help="""Set minimum brightness directly - overrides minfactor - r""")
@@ -91,23 +91,28 @@ try:
 except FileNotFoundError:
     file_ = args.source + ".dat"
     data = Table.read(ROOT_PATH / file_, format="ascii")
+    
+if cmd_args.Object is not None:
+    Object_ = cmd_args.Object
+    mask = np.array([source in Object_ for source in data["SimbadName"]])
+    data = data[mask]
+else:
+    data = data
 
 # Connect
 conn = splusdata.connect('Luis', 'plutarco*80')
-
 for tab in data:
     ra = tab["RA"]
     dec = tab["DEC"]
     Name = tab["SimbadName"]
     # Getting the Fits image in the g, r and i-band
-    hdu_g = conn.get_cut(ra, dec, 60, 'G')
+    hdu_g = conn.get_cut(ra, dec, 60, 'R')
     hdu_r = conn.get_cut(ra, dec, 60, 'F660')
     hdu_i = conn.get_cut(ra, dec, 60, 'I')
     # Save the image, note that the output image in compress
     hdu_g.writeto('{}_{}_{}_g.fz'.format(Name, ra, dec), overwrite=True) # write to fits
     hdu_r.writeto('{}_{}_{}_r.fz'.format(Name, ra, dec), overwrite=True)
     hdu_i.writeto('{}_{}_{}_i.fz'.format(Name, ra, dec), overwrite=True)
-
 
     # Decompress
     fz2fits('{}_{}_{}_g.fz'.format(Name, ra, dec))
@@ -118,9 +123,7 @@ for tab in data:
     image_g = '{}_{}_{}_r.fz'.format(Name, ra, dec).replace(".fz", ".fits")
     image_b = '{}_{}_{}_g.fz'.format(Name, ra, dec).replace(".fz", ".fits")
 
-    
-    
-     # # Read the FITS file
+    # # Read the FITS file
     # hdul = fits.open('{}_{}_r.fits'.format(Name, rad))[0]
     # wcs = WCS(hdul.header)          
 
@@ -176,11 +179,13 @@ for tab in data:
     img.axis_labels.set_xtext('RA (J2000)')
     #img.axis_labels.hide_x()
     img.axis_labels.set_ytext('Dec (J2000)')
-    img.axis_labels.set_font(size=18, weight='medium', stretch='normal', family='sans-serif', style='normal', variant='normal')
+    img.axis_labels.set_font(size=18, weight='medium', stretch='normal',
+                             family='sans-serif', style='normal', variant='normal')
     #img.axis_labels.hide()
     #img.axis_labels.hide_y()
 
-    img.tick_labels.set_font(size=18, weight='medium', stretch='normal', family='sans-serif', style='normal', variant='normal')
+    img.tick_labels.set_font(size=18, weight='medium', stretch='normal',
+                             family='sans-serif', style='normal', variant='normal')
     #img.axis_labels.set_yposition('right')
     #img.tick_labels.set_yposition('right')
     #img.tick_labels.hide()
@@ -241,10 +246,7 @@ for tab in data:
         img.save(image_r.replace('.fits', '-RGB.pdf'))
 
     # Deleting files
-    try:
-        os.remove('{}_{}_{}_g.fz'.format(Name, ra, dec))
-        os.remove('{}_{}_{}_r.fz'.format(Name, ra, dec))
-        os.remove('{}_{}_{}_i.fz'.format(Name, ra, dec))
-    except FileNotFoundError:
-        pass
-        print("FZ File Removed!")
+    #os.remove('{}_{}_{}_g.fz'.format(Name, ra, dec))
+    # os.remove('{}_{}_{}_r.fz'.format(Name, ra, dec))
+    # os.remove('{}_{}_{}_i.fz'.format(Name, ra, dec))
+    # print("FZ File Removed!")
