@@ -1,86 +1,0 @@
-SIMPLE  =                    T / conforms to FITS standard                      BITPIX  =                  -32 / array data type                                NAXIS   =                    2 / number of array dimensions                     NAXIS1  =                   60                                                  NAXIS2  =                   60                                                  COMMENT   FITS (Flexible Image Transport System) format is defined in 'AstronomyCOMMENT   and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H EQUINOX =        2000.00000000 / Mean equinox                                   MJD-OBS =   5.834700000000E+04 / Modified Julian date at start                  RADESYS = 'ICRS    '           / Astrometric system                             CTYPE1  = 'RA---TAN'           / WCS projection type for this axis              CUNIT1  = 'deg     '           / Axis unit                                      CRVAL1  =   1.333333333330E+01 / World coordinate on this axis                  CRPIX1  = 4.238500000000000E+03 / Reference pixel on this axis                  CD1_1   =  -1.527777777778E-04 / Linear projection matrix                       CD1_2   =   0.000000000000E+00 / Linear projection matrix                       CTYPE2  = 'DEC--TAN'           / WCS projection type for this axis              CUNIT2  = 'deg     '           / Axis unit                                      CRVAL2  =  -7.221956922220E+01 / World coordinate on this axis                  CRPIX2  = -1.069500000000000E+03 / Reference pixel on this axis                 CD2_1   =   0.000000000000E+00 / Linear projection matrix                       CD2_2   =   1.527777777778E-04 / Linear projection matrix                       EXPTIME =                  1.0 / Normalized exposure time                       GAIN    =   2.113674576589E+02 / Maximum equivalent gain (e-/ADU)               SATURATE=   1.393351355068E+03 / Saturation Level (ADU)                         COMMENT                                                                         SOFTNAME= 'SWarp   '           / The software that processed those data         SOFTVERS= '2.38.0  '           / Version of the software                        SOFTDATE= '2017-01-17'         / Release date of the software                   SOFTAUTH= '2010-2012 IAP/CNRS/UPMC' / Maintainer of the software                SOFTINST= 'IAP  http://www.iap.fr' / Institute                                  COMMENT                                                                         AUTHOR  = 'jype    '           / Who ran the software                           ORIGIN  = 't80s-jype4'         / Where it was done                              DATE    = '2019-02-12T20:02:57' / When it was started (GMT)                     COMBINET= 'WEIGHTED'           / COMBINE_TYPE config parameter for SWarp        COMMENT                                                                         COMMENT  Propagated FITS keywords                                               OBJECT  = 'MC0094  '           / name of observed object                        TELESCOP= 'T80     '           / Telescope Model                                INSTRUME= 'T80Cam  '           / Custom. Name of instrument                     FILTER  = 'I       '           / Filter used for this observation               COMMENT                                                                         COMMENT  Axis-dependent config parameters                                       RESAMPT1= 'LANCZOS3'           / RESAMPLING_TYPE config parameter               CENTERT1= 'MANUAL  '           / CENTER_TYPE config parameter                   PSCALET1= 'MANUAL  '           / PIXELSCALE_TYPE config parameter               RESAMPT2= 'LANCZOS3'           / RESAMPLING_TYPE config parameter               CENTERT2= 'MANUAL  '           / CENTER_TYPE config parameter                   PSCALET2= 'MANUAL  '           / PIXELSCALE_TYPE config parameter                       STATS 2019-02-12T17:03:20.023398                                        HIERARCH OAJ QC NCMODE = 0.008200000000000001 / Mode (ADU)                      HIERARCH OAJ QC NCMIDPT = 0.0 / Level estim (ADU)                               HIERARCH OAJ QC NCMIDRMS = 0.0226 / rms level (ADU)                             HIERARCH OAJ QC NCNOISE = 0.2849 / Noise estim (ADU)                            HIERARCH OAJ QC NCNOIRMS = 0.5237000000000001 / rms noise estim (ADU)                   FWHM ESTIM 2019-02-12T17:09:03.324585                                   HIERARCH OAJ PRO FWHMSEXT = 1.477 / FWHM arcsec estimated with SE               HIERARCH OAJ PRO FWHMSRMS = 0.141 / rms in FWHM with SE                         HIERARCH OAJ PRO FWHMMEAN = 1.30511703491211 / PSFex FWHM                       HIERARCH OAJ PRO FWHMBETA = 4.061669826507568 / PSFex beta                      HIERARCH OAJ PRO FWHMNSTARS = 35 / PSFex nstars                                 HIERARCH OAJ PRO ELLIPMEAN = 0.07245130091905594 / PSFex Ellip                  PIXSCALE=                 0.55                                                  FILENAME= 'MC0094_I_swp.fits'                                                   NCOMBINE=                    6                                                  TEXPOSED=                276.0                                                  EFECTIME=    263.6989638460076                                                  TEXPSUM =                276.0 / Maximum equivalent exposure time (s)           HIERARCH OAJ PRO PIPVERS = '0.9.9   '                                           HIERARCH OAJ PRO REFIMAGE = 'MC-20180817-073431_proc' / Reference image for scalHIERARCH OAJ PRO REFAIRMASS = 1.346802387477279 / Reference image airmass       HIERARCH OAJ PRO REFDATEOBS = '2018-08-17T07:33:22.996000' / Reference image datHIERARCH OAJ PRO SWCMB1 = 'MC-20180817-073139_proc'                             HIERARCH OAJ PRO SWSCALE1 = 0.0217360195384                                     HIERARCH OAJ PRO SWCMB2 = 'MC-20180817-073305_proc'                             HIERARCH OAJ PRO SWSCALE2 = 0.02167924597844                                    HIERARCH OAJ PRO SWCMB3 = 'MC-20180817-073431_proc'                             HIERARCH OAJ PRO SWSCALE3 = 0.02164529070464                                    HIERARCH OAJ PRO SWCMB4 = 'MC-20181125-020322_proc'                             HIERARCH OAJ PRO SWSCALE4 = 0.02368321754027                                    HIERARCH OAJ PRO SWCMB5 = 'MC-20181125-020448_proc'                             HIERARCH OAJ PRO SWSCALE5 = 0.02373199239736                                    HIERARCH OAJ PRO SWCMB6 = 'MC-20181125-020614_proc'                             HIERARCH OAJ PRO SWSCALE6 = 0.02372596921113                                    HISTORY Image was compressed by CFITSIO using scaled integer quantization:      HISTORY   q = 4.000000 / quantized level scaling parameter                      HISTORY 'SUBTRACTIVE_DITHER_1' / Pixel Quantization Algorithm                   X01TILE =                 29.5 / Center position                                Y01TILE =                 29.5 / Center position                                X0TILE  =                1293. / Center position                                Y0TILE  =                6601. / Center position                                HISTORY Image was compressed by CFITSIO using scaled integer quantization:      HISTORY   q = 4.000000 / quantized level scaling parameter                      HISTORY 'SUBTRACTIVE_DITHER_1' / Pixel Quantization Algorithm                   ZDITHER0=                 4714 / dithering offset when quantizing floats        CHECKSUM= '7LcoAIcm7IcmAIcm'   / HDU checksum updated 2019-02-12T17:11:24       DATASUM = '3622868641'         / data unit checksum updated 2019-02-12T17:11:31 END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ½Ê×]½Ê×]>Ÿjh>Æ­>ðuò>¹¢>ÔÃÊ>ÔÃÊ½~~­½»,3½5Å½5Å=[å‚=¨O>K–<>K–<>©¶>©¶>êP?EÞ?9oD?9oD?£?£?ðc>êÎ¶>Zµf>Zµf=ÿI’=ÿI’=‘s,=‘s,=¼ô$=¼ô$>;%¢>;%¢>öÀò?3jè?"K6?€,>ÇÎß>ÇÎß?‘2e@ ž@
-Hê?4”=’ =pØÊ½¤*½¤*½8T+½8T+½ßbª½ßbª½ßbª½ßbª>ž6E>ž6E>³²2?^½Ê×]½Ê×]>Ÿjh>Æ­>¹¢>ðuò>ÔÃÊ>ÔÃÊ½~~­½»,3½5Å½5Å=¨O=[å‚<¢^<¢^>©¶>©¶>êP?EÞ?I¥?I¥?güz?güz>Øó~>áp>Zµf>Zµf=ÿI’=ÿI’=‘s,=‘s,=¼ô$=¼ô$>;%¢>;%¢>öÀò?3jè?"K6?€,>ÇÎß>ÇÎß?l²?‡ ”?šŽŸ?2U=’ =pØÊ½¤*½¤*½8T+½8T+½ßbª½ßbª½ßbª½ßbª=jð=jð=²ÑR=”ó<=³$Ï=³$Ï<×{O<×{O>©Bó? "P?Í>œ‰®½5Å½5Å½5Å½5Å=‹ ì=‹ ì=ßáþ=ßáþ>úÙ_?:´0?kP*@EQe@ÙÄÖ@–ìÓ?éÄ?4;á>£Çì>£Çì>o°>o°=‘s,=‘s,=ÿI’=ÿI’>>=¼ô$=¼ô$>Ù×>Ù×>ÍÒá>ÍÒá>¾>¾>–Y¨>–Y¨=óùÐ=óùÐ½M-½M-=¤¤<=¤¤<=ì’O=ì’O½ßbª½ßbª½ßbª½ßbª=:«x=:«x>"û#>"û#=³$Ï=³$Ï<×{O<×{O>©Bó? "P?~ó>rÏø½5Å½5Å½5Å½5Å=‹ ì=‹ ì=ßáþ=ßáþ>úÙ_?:´0?Èøó@»d,Au¿A5z@"ëR?<¼>£Çì>£Çì>o°>o°=‘s,=‘s,=ÿI’=ÿI’>aÌ3>aÌ3=¼ô$=¼ô$>;>;>›P1>›P1>™Hç>™Hç>–Y¨>–Y¨=óùÐ=óùÐ½M-½M-=¤¤<=¤¤<=ì’O=ì’O½ßbª½ßbª½ßbª½ßbª=:«x=:«x>Çe>Çe?AÔ?AÔ>¾|t>¾|t> ›Ÿ> ›Ÿ>>QE>>QE½-«½-«=ã´¶=ã´¶?q]>åóX?“A„?ø¿¾?´è;?† Ê?òìÀ@·ódAg¶8A=LS@·/?q²Ò>düô>düô>Uï>Uï>wiƒ=s|t>µgÚ>µgÚ>¥´>¥´>¥´>¥´>m²¢>KZd>Ý¨>Ý¨?
-œß>ó¯]=³}=³}<)ëï<)ëï<^xP<^xP=ÈY¸=ÈY¸>¤>¤½‘î½‘î½‘î½‘î¾  œ¾  œ¾  œ¾  œ?b‘l?b‘l>¾|t>¾|t> ›Ÿ> ›Ÿ>>QE>>QE½-«½-«=ã´¶=ã´¶>åóX?q]@E(P@¶^@‰c?ðXô?¤h@^)@ªxi@‚7”?ò
-m?\^Ž>düô>düô>Uï>Uï?Ì>ÎRÚ>µgÚ>µgÚ>¥´>¥´>¥´>¥´>„i>••"?Ÿ¼?Ÿ¼?µ+?ïú=³}=³}<)ëï<)ëï<^xP<^xP=ÈY¸=ÈY¸=^Ô£=^Ô£½‘î½‘î½‘î½‘î¾  œ¾  œ¾  œ¾  œ@’Q¸@¡"æ@VWK?›Ö>ò*´>ò*´>¦Ù§>¦Ù§=”`Ð=”`Ð»p3?»p3?>¬¦>î’å@ekâAo’@îIÖ@Ûø?¤ºÂ?¤ºÂ?³ó?³ó??>ájn=Ë®>ÉPø>ÉPø?)™Û?->˜u>˜u>¥´>¥´>¥´>¥´?Vé¿@i2@­HÆ@µÎ@Ÿî?,Iÿ?)>ÏÏ<)ëï<)ëï<^xP<^xP=ÈY¸=ÈY¸=ÈY¸=ÈY¸½ÏÔ½ÏÔ½ÏÔ½ÏÔ¾  œ¾  œ¾  œ¾  œA8DîAƒj@æ#Œ@DÙ?†¨?†¨>åxg>åxg=”`Ð=”`Ð»p3?»p3?>¬¦>î’å@?wJ@¾^l@š?|@lr?7Òy?7Òy? ÿ"? ÿ"???7eÙ>ÀEp>ÉPø>ÉPø?>s>Ù£P>˜u>˜u>¥´>¥´>¥´>¥´?Ši\@.œA$)XA(Ý@BåF?:j‹?)>ÏÏ<)ëï<)ëï<^xP<^xP=ÈY¸=ÈY¸=ÈY¸=ÈY¸½ÏÔ½ÏÔ½ÏÔ½ÏÔ¾  œ¾  œ¾  œ¾  œA6E±AˆšÌA¾†@l-?—ç?—ç?ÈŒê?[GÓ>”C">”C"=BwÚ=BwÚ>Žjˆ>³E?†Š£?‰‹C?RÀ>ÿ?>`äæ>`äæ>"
-t>"
-t>|>üŠ>ðu‹>[È>Cøí>Cøí>“o£>“o£>Ú–ˆ>Ú–ˆ?,ðd?,ðd?RØ´?RØ´?y³,@ªAzrAzr@!Ë”?[Uu>‹“µ>‹“µ>LÉ¸>LÉ¸>ÖOX>ùåù>­%t>Â½H=±’=±’¾-áY¾-áY¾-áY¾-áY½åzx½åzx<Ùš¹>	vœ@Ãf@öÓð@†éc@»/?—ç?—ç?ÈŒê?[GÓ>”C">”C"=BwÚ=BwÚ>Žjˆ>³E>U0>2Z0>Òv/>{5æ>`äæ>`äæ>"
-t>"
-t><——>ÜËÎ>¯6¥=ù»û>Cøí>Cøí>“o£>“o£>Ú–ˆ>Ú–ˆ?}‚X?}‚X?RØ´?RØ´?ƒ"#?ü#a@@
-®@@
-®?ó·?]½£>‹“µ>‹“µ>LÉ¸>LÉ¸?nª@?¸Iø?÷8Y?ØÚ.=±’=±’¾-áY¾-áY¾-áY¾-áY½åzx½åzx<Ùš¹>	vœ@m/Ö@7jß?œí9?š5Þ?i¦Y?i¦Y?ˆé±?‰¡ï?-b>„Yy>\
->\
-=níl=˜ê¼µŸ¼µŸ>ÎÃ >ÎÃ >ˆ¸>ˆ¸>9ÙÀ>9ÙÀ>±}>±}=û#=û#>h})>h})>“o£>“o£>øÚ>øÚ?If”?nƒè?RØ´?RØ´?SàÆ?SàÆ?ß¬J?ß¬J?£mª?‰Gí?U?U>ª õ>ëâ±?‘ŒL@S^õ@¶–@Uc‡?>½ü¾-áY¾-áY¾-áY¾-áY½]K½]K=Æ=Æ@Š Q@ï?U»Š?PLÔ?i¦Y?i¦Y?;°ò?´³'?-b>„Yy>\
->\
-=níl=˜ê¼µŸ¼µŸ>ÎÃ >ÎÃ >ˆ¸>ˆ¸>9ÙÀ>9ÙÀ>±}>±}=û#=û#>h})>h})>“o£>“o£>¼Rƒ>¼Rƒ?;îÔ?a(?RØ´?RØ´?SàÆ?SàÆ?ß¬J?ß¬J?¡8?‹–_?,ûë?,ûë>ª õ>ëâ±?‘ŒL@S^õ@¶–@Uc‡?>½ü¾-áY¾-áY¾-áY¾-áY½]K½]K<#é«<#é«@}P?ÚÅ>ï|2>ï|2>tä>tä>ÔÜË>ÔÜË>}{€>rÒŸ½’ú6½’ú6½%iú½%iú½%iú½%iú¼´¼´½É@5½É@5¾3˜d¾3˜d¾3˜d¾3˜d½°¹½°¹<
-1x<
-1x=¡žª=¡žª=÷µE=÷µE>ÛW±>ÛW±?„?$9½?ž?ÛR?ñ*?éðF?®N?®N?èÙÏ?èÙÏ?‡×*?S®4?|¨o?¢?ˆ?Ò(J?§õ*>Û¸>Û¸<¥ ”<¥ ”º7º7<k a<k a¼ú|®¼ú|®?èg?l¾>ï|2>ï|2>tä>tä>žb>žb¼RmØ¼¾}ø½’ú6½’ú6½%iú½%iú½%iú½%iú½’üQ½’üQ½É@5½É@5¾3˜d¾3˜d¾3˜d¾3˜d½°¹½°¹<
-1x<
-1x=¡žª=¡žª=÷µE=÷µE>ÛW±>ÛW±?„?$9½?çOm@,\?ñ*?éðF?®N?®N?èÙÏ?èÙÏ?‡×*?S®4?\ÿí?Š,?&I>£N>Û¸>Û¸<¥ ”<¥ ”º7º7<k a<k a¼ú|®¼ú|®>Ü >Ý÷=‘¦k=‘¦k>Gª¯>Gª¯>þ˜>þ˜=å«Â=å«Â½’ú6½’ú6½%iú½%iú½%iú½%iú½6Ã~½6Ã~½É@5½É@5¾3˜d¾3˜d¾3˜d¾3˜d½°¹½°¹<
-1x<
-1x>Co2>Co2>rÄÃ>rÄÃ?'û?'û?6ª­?CÝ@
-]G@1­H@6­@!y
-@Qó@Qó@t@Ô?Žœ?{í²?q®E?q®E>öš>öš>Q@´>Q@´º7º7<¥ ”<¥ ”<k a<k a¼ú|®¼ú|®>Ý÷>Ü =‘¦k=‘¦k>Gª¯>Gª¯>þ˜>þ˜=å«Â=å«Â½’ú6½’ú6½%iú½%iú½%iú½%iú½6Ã~½6Ã~½É@5½É@5¾3˜d¾3˜d¾3˜d¾3˜d½°¹½°¹<
-1x<
-1x>Co2>Co2>j0=>j0=?'û?'û?6ª­?CÝ@
-]G@1­H@[Ì^@q j@ã’@ã’@'— @$•€?Žœ?{í²?q®E?q®E>öš>öš>Q@´>Q@´º7º7<¥ ”<¥ ”<k a<k a¼ú|®¼ú|®?.[=Ý’v¾ÜL¾ÜL> ®> ®>TG>TG=úu\=úu\>¯D?DÞ±?4Éf>¯ôV> > ½n½n½n½n½¥Ký½¥Ký½¥Ký½¥Ký:*Â`:*Â`:*Â`:*Â`=¹h"=¹h">"‘>"‘>¶`m>¶`m?Sè›?pÚ†?Üïš@Rl@²TÔ@þý¸AqNA¥¼@Ä‡»@bM/?Ä"˜?Žt?NDx?NDx>’w>1‘>‘>‘?ð>«Á4?’øã@~?”H>Öƒg>Ûc>Ûc>ç¢:¼µ]ê¾ÜL¾ÜL> ®> ®>TG>TG=úu\=úu\>•úQ?‹åÓ@ !<?•ë> > ½n½n½n½n½¥Ký½¥Ký½¥Ký½¥Ký:*Â`:*Â`:*Â`:*Â`=¹h"=¹h">"‘>"‘>¶`m>¶`m?Sè›?pÚ†@ów@„3A8(–AàB.oRB
-]‘An›|@ÁW¬@`ƒ?Ïâ?NDx?NDx>1‘>’w>‘>‘?w4?QšŠ@VÖ@ˆó@
-gM?z”¸>Ûc>Ûc<ÍTo<ÍTo>$”¥>$”¥>8>8>0à:>0à:=úu\=úu\>ÒŠJ?V_Â?Ñ À?ž%> > ½n½n½n½n½¥Ký½¥Ký½¥Ký½¥Ký:*Â`:*Â`:*Â`:*Â`=¹h"=¹h">:,>
-ö>¶`m>¶`m?M¬Æ?VL@H¹!@ßÅâA™YïBœn0C0ôBþÞÚB<†A{l@côz?Æ§±?eÝ£?cÏ>‘>‘>‘>‘>èÙ;?3†@WpÒ@yu^?àk¯?{bS>Ûc>Ûc<ÍTo<ÍTo=ÀÖ®=ÀÖ®>8>8>0à:>0à:=úu\=úu\>Õ™?TØd?`D(>õ…> > ½n½n½n½n½¥Ký½¥Ký½¥Ký½¥Ký:*Â`:*Â`:*Â`:*Â`=¹h"=¹h">
-ö>:,>¶`m>¶`m?n¿Ö?w\@QÞWAA½:}BÔ€C…àÁCCªßB3OìA?Ü¢@côz?Æ§±?eÝ£?cÏ>‘>‘>‘>‘?i?%]º?ÑÉ ?ùøà?°7a?ù¹>Ûc>Ûc½Ö¨F½Ö¨F½‰Õ½‰Õ½ˆú©½ˆú©½ˆú©½ˆú©½·Ã/½·Ã/>G(!>G(!>%úí>%úí>%úí>%úí<¨pö<¨pö>B¾V>B¾V>Ö¹Â>Ö¹Â? jö>Üä‰?gº?gº>ò½>ò½>°àŽ>°àŽ>¢es>¿[©?7b/?7b/?¯•x@(…W@©ÈmA
-;üA¯².B˜Ú!CÀÓBïÕqBJ;A!0ñ@­^?°z6?±Œ>ûNÒ>“B>‘q>il€>il€¾ã¾ã=ƒ‰=ƒ‰>£DY>£DY>‰Ñ·>‰Ñ·½Ö¨F½Ö¨F½‰Õ½‰Õ½ˆú©½ˆú©½ˆú©½ˆú©½·Ã/½·Ã/>G(!>G(!>%úí>%úí>%úí>%úí<¨pö<¨pö>B¾V>B¾V?š¢?š¢?X ?vx?šüR?šüR>ò½>ò½>°àŽ>°àŽ>¢es>¿[©?7b/?7b/?»Ü @QdÉAqXA%}ÜA`äüB ebB=ìB,>A•Ï@ÝÎã@†?‚+–?±Œ>ûNÒ>‘q>“B>il€>il€¾ã¾ã=ƒ‰=ƒ‰>£DY>£DY>‰Ñ·>‰Ñ·½‰Õ½‰Õ½Ö¨F½Ö¨F¾ ]¼	Ø›½ˆú©½ˆú©½·Ã/½·Ã/>G(!>G(!>U¯ò>U¯ò>U¯ò>U¯ò<Cñr<Cñr>+?ºâ@&R?¶Ï¬?Þ7W@´e€@äù@YÌ4?~‚æ?2ÀX>°àŽ>°àŽ>°àŽ>°àŽ?>`2?>`2?Â’L@QSêA ÇeA Çe@ç³Aã®ACsA7ÔZ@Èpü@süº?Òp?|ª?q?q>s.>ªâM>il€>il€¾'\8¾'\8==¹==¹>/<>/<>ŠÃz?8‹z½‰Õ½‰Õ½Ö¨F½Ö¨F¾ ]¼	Ø›½ˆú©½ˆú©½·Ã/½·Ã/>G(!>G(!>U¯ò>U¯ò>U¯ò>U¯ò<Cñr<Cñr>–³>@
-’P@Ž°@8Å"@)¹‹A £ŽAxXž@ÛÔF?~‚æ?2ÀX>°àŽ>°àŽ>°àŽ>°àŽ?>`2?>`2?ˆK"@1âŽ@od@od@‡eš@†¤B@šÕr@=–@UP@bÜ?«k`?ý2?q?q>ªâM>s.>il€>il€¾'\8¾'\8==¹==¹>/<>/<>ŠÃz?8‹z>”¢>”¢>Aº>Aº;Fö~;Fö~>…ó>…ó?3,?3,?^2ž?^2ž>†Øi>†Øi>-à>-à>‰ŒQ>‰ŒQ?C S?Ù'8@f½@NRJ@=Xd@ñàA2íº@³ÿ±?‘M¹?2Ã?22?22>ïé”>ïé”>ã=>ã=>üÚE?wŒ?Ü( ?Þa?íìe?íìe?à+?à+?«»z?…Ð>â±>â±>À/;>À/;=l<šðÄ½èÁ½èÁ½!¬ò½!¬ò½!¬ò½!¬ò½RÄr½RÄr>r®D>r®D>”¢>”¢>Aº>Aº;Fö~;Fö~>…ó>…ó?Ž!C?Ž!C?IH?IH>†Øi>†Øi>-à>-à>‰ŒQ>‰ŒQ>„¿Î?˜Ç?Ùv?ãG§?ÍwO@ar³@†O–@‘&?lew>÷£’?22?22?­Â?­Â>ã=>ã=>ÉŸÝ>½‹?cí[?h^K?©åÁ?©åÁ?˜Ô±?˜Ô±?sT¿?'}Ø>â±>â±>À/;>À/;=l<šðÄ½èÁ½èÁ½!¬ò½!¬ò½!¬ò½!¬ò½RÄr½RÄr½yÊ½yÊ>”¢>”¢>&÷>};Fö~;Fö~>gåO>Ÿl?mÛ?mÛ?V&¨?V&¨>†Øi>†Øi>-à>-à>aì>aì>‡Ÿ@>‡Ÿ@>Î>±5’?1v?V.T?g²1?g²1>¡ÿd>¡ÿd>úÀF?f-?sÏ?‡¸>ã=>ã=>ã=>ã=>÷ùX>÷ùX?Cw?Cw?’ ¼?’ ¼?*{ª?*{ª>â±>â±>À/;>À/;<Ôäf<Ôäf½èÁ½èÁ½!¬ò½!¬ò½!¬ò½!¬ò=Î†·=Î†·½TV¥½TV¥>”¢>”¢>}>&÷;Fö~;Fö~>V<ñ>–A>?g0E?g0E?V&¨?V&¨>†Øi>†Øi>-à>-à>aì>aì>‡Ÿ@>‡Ÿ@>±5’>Î?0H?Ô?=µµ?=µµ>¡ÿd>¡ÿd>úÀF?f-?sÏ?‡¸>ã=>ã=>ã=>ã=>÷ùX>÷ùX?Cw?Cw?’ ¼?’ ¼?*{ª?*{ª>â±>â±>À/;>À/;<Ôäf<Ôäf½èÁ½èÁ½!¬ò½!¬ò½!¬ò½!¬ò=Î†·=Î†·½TV¥½TV¥?ƒV>2_=J=J;é`r;é`r;é`r;é`r?~?¾‚¨?ª¶æ?ª¶æ@ÀD?å[Ù?˜ýv?rQ,>õuq>Vx>>¼(h
-¼(h
-¼(h
-¼(h
-»è®ü»è®ü»è®ü»è®ü=—=—;ÃX;ÃX?6Ü½?{ò9?ÄñD?ÄñD?ƒøy?N¦1?'Ú-?ÛD@Û?‘¦›?&WE?&WE>œ¥>œ¥>œ¥>œ¥>¸¦Â>¸¦Â>A\€>§K=uL«=uL«>‹*Û>§³:>$J>$J=B!=B!?-Q>i•ä=J=J;é`r;é`r;é`r;é`r?~?¾‚¨?ª¶æ?ª¶æ@s³´@¶+ò@uÿ3@Rý>õuq>Vx>>¼(h
-¼(h
-¼(h
-¼(h
-»è®ü»è®ü»è®ü»è®ü¼Ñ§ô¼Ñ§ô;ÃX;ÃX??—Û?‚V«@;¦@;¦?ƒøy?N¦1?'4S?ôZs@ç3?§QK?&WE?&WE>œ¥>œ¥>œ¥>œ¥>¸¦Â>¸¦Â>A\€>§K=uL«=uL«>‹*Û>§³:>$J>$J=B!=B!>ÙèÏ>ÙèÏ=J=J;é`r;é`r;é`r;é`r?E² ?E² ?€NÒ?¬}@¦ÝA1'UAš[@
->¬[&>kD½¼c¼c½1ÕÀ½1ÕÀ½1ÕÀ½1ÕÀ»è®ü»è®ü»è®ü»è®ü½ôºÿ½ôºÿ½ôºÿ½ôºÿ?J˜?Ÿbw@Lá@Lá?yT?]C?eDø?Î:9?¾ï?mË?®?®>œ¥>œ¥>œ¥>œ¥?kb?Æ{½?–fJ>´Œí=ªNk=ªNk>O‡>ã0ß>ÚC»¸P=B!=B!>ÙèÏ>ÙèÏ=J=J;é`r;é`r;é`r;é`r?E² ?E² ?SŠò?•ó½@ŸFA«Û@È-¿@2º~?<ñ±?!•M¼c¼c½1ÕÀ½1ÕÀ½1ÕÀ½1ÕÀ»è®ü»è®ü»è®ü»è®ü½ôºÿ½ôºÿ½ôºÿ½ôºÿ?J˜?Ÿbw?´Ÿ†?´Ÿ†?yT?]C?uÐÊ?»a+?ŽÓ?'•?®?®>œ¥>œ¥>œ¥>œ¥@r@hö¾@9?0%6=ªNk=ªNk>ŠÖñ>¿Û1>¥W‰½×ãª=B!=B!¼¤ž¼¤ž¼¤ž¼¤ž>@>@>@>@>9Dì>9Dì>r‡?
-]§@c>@€.Z@^×Þ@—ü-@“}b?äôz? \ˆ? \ˆ=‰” =‰” ½ª½ª½¸ær½¸ær½¸ær½¸ær½Í¹½Í¹½Í¹½Í¹>˜ >˜ >n¥F>n¥F=¯ÔJ=¯ÔJ=¯ÔJ=¯ÔJ>-Aö>-Aö>-Aö>-Aö?#ã?#ã>£.´>£.´@T@u Æ?þOË?me=ÕJ=ÕJ=ÕJ=ÕJ=]<=]<>uïT>uïT¼¤ž¼¤ž¼¤ž¼¤ž>@>@>@>@>9Dì>9Dì>r‡?
-]§?ÑO?ï­x@	â@Â1S@Ý»@k«? \ˆ? \ˆ=‰” =‰” ½ª½ª½¸ær½¸ær½¸ær½¸ær½Í¹½Í¹½Í¹½Í¹=u¼=u¼½„Þo½„Þo=¯ÔJ=¯ÔJ=¯ÔJ=¯ÔJ>-Aö>-Aö>-Aö>-Aö?ÿÇ?ÿÇ>£.´>£.´?sî?¼øñ?§i}?ñÞ=ÕJ=ÕJ=ÕJ=ÕJ=]<=]<>uïT>uïT½ŠÇ <áàM¼¤ž¼¤ž>2uú?5„F? cW>C!@=U,=U,>/MH>/MH>òh>òh?Çêæ@h·Œ@u ª@Ö‹?"¸ú?u'?Jw>òP>¬óx>Ü½½¸ær½¸ær½þÛŒ½eâ¯½Í¹½Í¹½Í¹½Í¹½)_ ½)_ ½)_ ½)_ ½¥Ý<½¥Ý<½HÖ¬½çO">£1>£1>£1>£1?±?±>£.´>£.´=ë-=ë-½‹àÇ½‹àÇ=ÕJ=ÕJ=ÕJ=ÕJ>6<>6<?€Ë?€Ë<áàM½ŠÇ ¼¤ž¼¤ž>2uú?5„F?1Ys>Ã|Ú=U,=U,>/MH>/MH>òh>òh?Nä?ÄTO?Áâe?©Tq?n÷X? ²¸@*B@âw>¬óx>Ü½½¸ær½¸ær½þÛŒ½eâ¯½Í¹½Í¹½Í¹½Í¹½)_ ½)_ ½)_ ½)_ ½¥Ý<½¥Ý<½HÖ¬½çO">£1>£1>£1>£1?rŸ?rŸ>£.´>£.´=ë-=ë-½‹àÇ½‹àÇ=ÕJ=ÕJ=ÕJ=ÕJ>6<>6<?DÉ7?DÉ7¼”]‹¼”]‹¼‘Ë¼‘Ë?g¢?¬Ï?Pf?Pf½OQk½OQk½4†€½4†€=8^=8^>s:O>s:O>ˆËE>ˆËE>ß/@K@ßMT@­›¬?hÁS=»t™½òþ
-½òþ
-½òþ
-½òþ
-½ÍŽl½ÍŽl½ÍŽl½ÍŽl¾€YT¾€YT¾€YT¾€YT¾Dcx¾Dcx¾Dcx¾Dcx¼÷Mq¼÷Mq¼÷Mq¼÷Mq=¸G½=¸G½;µ¿ä;µ¿ä¾¡±¾¡±¾¡±¾¡±½e°—½e°—½e°—½e°—=ÿrJ>ç_>¾ŸÞ>¾ŸÞ¼”]‹¼”]‹¼‘Ë¼‘Ë?'h?â;?Pf?Pf½OQk½OQk½4†€½4†€=8^=8^>s:O>s:O>ˆËE>ˆËE?a@§¨@¤B’@e!Õ?hÁS=»t™½òþ
-½òþ
-½òþ
-½òþ
-½ÍŽl½ÍŽl½ÍŽl½ÍŽl¾€YT¾€YT¾€YT¾€YT¾Dcx¾Dcx¾Dcx¾Dcx¼÷Mq¼÷Mq¼÷Mq¼÷Mq=¸G½=¸G½;µ¿ä;µ¿ä¾¡±¾¡±¾¡±¾¡±½e°—½e°—½e°—½e°—=·‡Ö=÷äJ¾”q¾”q¼Çâ+¼Çâ+¾Ÿ±ò>”L?´þ?(É>w†!>w†!½OQk½OQk½4†€½4†€=8^=8^>s:O>s:O=Ð³Ñ=Ð³Ñ>ÇB0>ÇB0?ºŠj?¹NÒ¼¶Áà¼¶Áà½òþ
-½òþ
-½òþ
-½òþ
-½Ð…½Ð…½æ»O½æ»O¾€YT¾€YT¾€YT¾€YT¾Dcx¾Dcx¾Dcx¾Dcx¼÷Mq¼÷Mq¼÷Mq¼÷Mq=
-}a=
-}a½OZ½OZ¾¡±¾¡±¾¡±¾¡±½e°—½e°—½e°—½e°—<4<4<4<4¼Çâ+¼Çâ+¾Ÿ±ò>”L?´þ?(É>w†!>w†!½OQk½OQk½4†€½4†€=8^=8^>s:O>s:O=Ð³Ñ=Ð³Ñ>hŒ >hŒ >£ØD>žéæ¼¶Áà¼¶Áà½òþ
-½òþ
-½òþ
-½òþ
-½üñ‹½üñ‹½æ»O½æ»O¾€YT¾€YT¾€YT¾€YT¾Dcx¾Dcx¾Dcx¾Dcx¼÷Mq¼÷Mq¼÷Mq¼÷Mq=
-}a=
-}a½OZ½OZ¾¡±¾¡±¾¡±¾¡±½e°—½e°—½e°—½e°—<4<4<4<4<¿8<¿8>E­2>ý9
-?‚>¡H2>• ·>• ·½Ü÷½Ü÷½Ü÷½Ü÷½¼Ð?½¼Ð?½¼Ð?½¼Ð?¼Bqü¼Bqü¼Bqü¼Bqü¾ž¾ž¾ž¾ž¾·¯¾QhÕ¾1B¾1B¾‹Ò—¾‹Ò—¾‹Ò—¾‹Ò—¾/Ê’¾/Ê’¾/Ê’¾/Ê’½ëÖÀ½ëÖÀ½ëÖÀ½ëÖÀ=)E=)E=)E=)E½péÝ½péÝ½péÝ½péÝ¼²P¼²P=‹‘ö=‹‘ö>{Çà>{Çà>—`>—`=¹ˆ=¹ˆ=SµK=SµK<¿8<¿8>E­2>ý9
-?‚>¡H2>• ·>• ·½Ü÷½Ü÷½Ü÷½Ü÷½¼Ð?½¼Ð?½¼Ð?½¼Ð?¼Bqü¼Bqü¼Bqü¼Bqü¾ž¾ž¾ž¾ž¾QhÕ¾·¯¾1B¾1B¾‹Ò—¾‹Ò—¾‹Ò—¾‹Ò—¾/Ê’¾/Ê’¾/Ê’¾/Ê’½ëÖÀ½ëÖÀ½ëÖÀ½ëÖÀ=)E=)E=)E=)E½péÝ½péÝ½péÝ½péÝ¼²P¼²P=»Ç*=»Ç*>{Çà>{Çà>±†”>±†”=¹ˆ=¹ˆ=SµK=SµK<¿8<¿8>žö?Um>òŠ>¤š>Š*5>Š*5½Ü÷½Ü÷½Ü÷½Ü÷½¼Ð?½¼Ð?½¼Ð?½¼Ð?¼Uü¼Uü¼Uü¼Uü¾ž¾ž¾ž¾ž<yØ<yØ=¡ô=½LŸú¾‹Ò—¾‹Ò—¾‹Ò—¾‹Ò—¾/Ê’¾/Ê’¾/Ê’¾/Ê’½ëÖÀ½ëÖÀ½ëÖÀ½ëÖÀ=¶¶=¶¶=¶¶=¶¶½péÝ½péÝ½péÝ½péÝ>ÚBÞ?K¿â?ÑN?ÑN?•ë>†ab>ùâ‘>ùâ‘=¹ˆ=¹ˆ=SµK=SµK<¿8<¿8>D]z> O›>¤š>òŠ>õf>õf½Ü÷½Ü÷½Ü÷½Ü÷½¼Ð?½¼Ð?½¼Ð?½¼Ð?¼Uü¼Uü¼Uü¼Uü¾ž¾ž¾ž¾ž<yØ<yØ=¤³s½G!¾‹Ò—¾‹Ò—¾‹Ò—¾‹Ò—¾/Ê’¾/Ê’¾/Ê’¾/Ê’½ëÖÀ½ëÖÀ½ëÖÀ½ëÖÀ=¶¶=¶¶=¶¶=¶¶½péÝ½péÝ½péÝ½péÝ?òð?–@CC6@CC6?]ë?¯±>ùâ‘>ùâ‘=¹ˆ=¹ˆ=SµK=SµK¾§¢¾§¢¾4ÜW½´åØ>hÓÌ>hÓÌ>é9p>²Rû¾Ac]¾Ac]¾KÙu¾KÙu¾&ý¾&ý¾&ý¾&ý=R¦=R¦=ž€,=ž€,<vÑ×<vÑ×<vÑ×<vÑ×>T^†?g?lP>vöß½Éd½Éd½Éd½Éd¼èD¼èD<û¹Ð>Bâ>x,l=ÜT€=‡‡Ð=‡‡Ð>ý‚ƒ?ƒÞ1?N!g?N-?>Õë…>;O¥>;O¥?.%?×O@ÃÔ@ÃÔ?©û(>Ùrã>Ùßˆ>Ùßˆ>ª”p>ª”p?){7?(ßØ¾§¢¾§¢¾4ÜW½´åØ>hÓÌ>hÓÌ>ßJˆ>¨d¾Ac]¾Ac]¾KÙu¾KÙu¾&ý¾&ý¾&ý¾&ý=¯­²=¯­²=ž€,=ž€,<vÑ×<vÑ×<vÑ×<vÑ×>Cö?dË?lP>vöß½Éd½Éd½Éd½Éd¼èD¼èD<û¹Ð>Bâ>£¤>=Eð=‡‡Ð=‡‡Ð>ý‚ƒ?ƒÞ1?N!g?N-? ôZ>Îó>;O¥>;O¥?.%?×O@™žF@™žF?©û(>Ùrã>Ùßˆ>Ùßˆ?"÷?"÷?,ð)?,TÊ¾Ôê¾ zZ¾§¢¾§¢>ÈÎÂ>ÈÎÂ>™Û>{ã¾Ac]¾Ac]¾KÙu¾KÙu¾&ý¾&ý¾&ý¾&ý=ž€,=ž€,<íp°¾*#¾äõ¾äõ>
-F½>
-F½>á\>á\>|£º>|£º½}#Õ½}#Õ½}#Õ½}#Õ¼³¼³=/°>íæ>¼²½>¼²½>bp3>bp3?E ?E ?p¦?Ôí?
-x9>úý5>;O¥>;O¥>¯+F>È©û?½A?½A?(ê´?(ê´?Ãæ?Ãæ?S?gqF?AÖ>úá;¾ zZ¾Ôê¾§¢¾§¢>ÈÎÂ>ÈÎÂ>™Û>{ã¾Ac]¾Ac]¾KÙu¾KÙu¾&ý¾&ý¾&ý¾&ý=ž€,=ž€,> Ò>’Õ(>Ù¹8>Ù¹8>
-F½>
-F½>r>r=ôN=ôN½}#Õ½}#Õ½}#Õ½}#Õ¼³¼³=/°>íæ>¼²½>¼²½>bp3>bp3>à¬>à¬?p¦?Ôí?
-x9>úý5>;O¥>;O¥>¯+F>È©û?CÄn?CÄn?¦¸?¦¸?Ãæ?Ãæ?5d$?I8T?AÖ>úá;¾,´â¾,´â¾,´â¾,´â=“O§=-I=Ãº=Ãº½Ÿ)½½˜ð¾
-)ˆ½Ýü>Â©\>Â©\>æÃ>æÃ?-`?-`?‘bñ@w8@P4Ó?j+n?Ýu?V¾«»ìY½u®¾\6a½ØÓ=cB=cB>2}¦½¹H=>™=>™½‡Î!½‡Î!?'»?$?ÍÃ?ÍÃ>¸y~>¸y~?!™?!™=î>†=î>†=î>†=î>†>Át>Át>Át>Át?JmE?P ¹?lŒÏ?lŒÏ?K.µ?K.µ>Á”h>Á”h¾,´â¾,´â¾,´â¾,´â=“O§=-I=Ãº=Ãº½Ÿ)½½˜ð½Ýü¾
-)ˆ>Â©\>Â©\>æÃ>æÃ?‘…?‘…?äúg@tú@:<?£$u?Ýu?V¾«»ìY½u®¾\6a½ØÓ=cB=cB>2}¦½¹H=>™=>™½‡Î!½‡Î!?#=?—?®­?®­?EÈ1?EÈ1?!™?!™=î>†=î>†=î>†=î>†>Át>Át>Át>Át?f>­?lr!?’ÃÈ?’ÃÈ?K.µ?K.µ>Á”h>Á”h¾,´â¾,´â¾,´â¾,´â<ô0=šZH=Ãº=Ãº½®a½®a½®a½®a>9>9?	ÒY?A÷@O?øÞ	?ç è@$ºÛ@b5?¦†È>Ú»c>Ú»c½	Kè½	Kè¾$ ¥¾$ ¥=cB=cB=cB=cB½‡Î!½‡Î!=>™=>™?¢Q3@Œ?AÍ@çž@rn?¢%?¢O?r;>Uxg<Æ0ò=î>†=î>†>Át>Át>Át>Át?‚ÜŽ@om3A¤A)ž@‰ÿY?®Ö?PöÅ>Ù¾,´â¾,´â¾,´â¾,´â<ô0=šZH=Ãº=Ãº½®a½®a½®a½®a>9>9?ŠÈ @KÄ@^‚@&ëÇ?ÛŒì?Œ„f?añ?^aX>Ú»c>Ú»c½	Kè½	Kè¾$ ¥¾$ ¥=cB=cB=cB=cB½‡Î!½‡Î!=>™=>™?Ñp™@æ AžÇA€u@|- @<Ä@U@ @¿>Uxg<Æ0ò=î>†=î>†>Át>Át>Át>Át@@Õ*ìA»êøAí$ÀA&Fš@•?PöÅ>Ù½ÎKS½ÎKS½ÎKS½ÎKS=¾=¾=¾=¾¼%Xß¼%Xß½‰>½‰>>j>šÌ?šÁ-@¿EøA!c@¢¢X?õÒô?º½¤>ß°s>i>¹>>¹>½ÖU¡½ÖU¡½ÖU¡½ÖU¡¾;­Y¾;­Y¾;­Y¾;­Y=/î=/î>·b>·b?üµ&@ÜÑ<AslÔANm™@˜Þ@³ñ@î­x@[C?T¨Ú?;9=ïx<=ïx<>Ž5˜>Ž5˜?1-è?1-è@ÿE@ò<AÑ¾„B±ADUà@2+?aü…?ZL‹½ÎKS½ÎKS½ÎKS½ÎKS=¾=¾=¾=¾¼%Xß¼%Xß=?=?>j>šÌ?´¹÷@ÅÄ*A?ð¿@ß½¾@Iû˜@,pð?zß>ÐI³>¹>>¹>½ÖU¡½ÖU¡½ÖU¡½ÖU¡¾;­Y¾;­Y¾;­Y¾;­Y=/î=/î>·b>·b?©¾2@r¢´@Á«?@œ	~@r/@Ÿ-Ž@ëìr@U„7?T¨Ú?;9=ïx<=ïx<>Ž5˜>Ž5˜?1-è?1-è?úDÎ@½¬‹AZS˜A_˜@á@f_?ZL‹?aü…½ÎKS½ÎKS½ÎKS½ÎKS=¾=¾=¾=¾º³¡Wº³¡Wº³¡Wº³¡W>½Õ">ý\:?ìö
-@^b@Ã:Ô@°P~@Üµg@Çñ¯?¨žù>ZT=MÖX=MÖX½ÖU¡½ÖU¡½ƒ
-A¾Ð€¾;­Y¾;­Y¾;­Y¾;­Y=Z,=Z,>'öo>'öo?U!?U!?Ø+H?äöH?ó@¬	@'ws?ýò´>Â¨´>Â¨´>;Ô®?om‰?¬ˆ??Â$>ïUÖ>ïUÖ?Qf@$©@§¾ÿ@§¾ÿ@'%l?å¡M?›	?Ÿ™]½ÎKS½ÎKS½ÎKS½ÎKS=¾=¾=¾=¾º³¡Wº³¡Wº³¡Wº³¡W>½Õ">ý\:?ä•ä?ñ‹;@%áÀ@W˜ï@Ì=@·ya?¨žù>ZT=MÖX=MÖX½ÖU¡½ÖU¡½ƒ
-A¾Ð€¾;­Y¾;­Y¾;­Y¾;­Y=Z,=Z,>'öo>'öo?U!?U!?—÷`?¤Â`?®!?až?§e*?Œèð>Â¨´>Â¨´?4ý¢@gF@¯]@C¸_>ïUÖ>ïUÖ?T)?¶ú@Ä’@Ä’?±_?dÆ‚?†Ç‚?‹W×½œ[’½œ[’½œ[’½œ[’=’Ç¡>9,C>>=ë×½£:M½£:M½£:M½£:M>U5>U5>Ýº°>Ýº°?|ý:?§õ°?ò?ò> ªl½|Ê@<ÝõN<ÝõN=á7¸=á7¸=¿“$=¿“$<·Às<·Às<·Às<·Às<9¼Ý<9¼Ý=Ûú =Ûú >KWG>KWG>Ü>Ü>Ü>Ü>Ü>Ü>h>h?¯®Ö@š÷§A$Ì—@¶=ø?huT?&b8>×Ð>×Ð>µJ>µJ>T6>T6>T6>T6½œ[’½œ[’½œ[’½œ[’=’Ç¡>9,C>>=ë×½£:M½£:M½£:M½£:M>U5>U5>
-(O>
-(O??Umµ?	óC?	óC> ªl½|Ê@<ÝõN<ÝõN=á7¸=á7¸=¿“$=¿“$<·Às<·Às<·Às<·Às<9¼Ý<9¼Ý=Ûú =Ûú >KWG>KWG>Ü>Ü>Ü>Ü>Ü>Ü>h>h?“›B@“òÃ@é:Ó@}t`?uNâ?3;Æ>×Ð>×Ð>µJ>µJ>T6>T6>T6>T6½œ[’½œ[’½œ[’½œ[’=ñ€>:áô>H
->H
-½£:M½£:M½£:M½£:M<%Ho<%Ho<?×€<?×€=¾|k=¾|k>ß >ß =Bï¹=Bï¹<ÝõN<ÝõN=íW¢=ÅP†¼Øï´¼Øï´<·Às<·Às<·Às<·Às=Sö¢=Sö¢=‰6j=‰6j=N¿U=N¿U<
-Ôà<
-Ôà>]Y>]Y>]Y>]Y<Ø	w<Ø	w?‹:?Ôœk@‚_?ÇwÎ? 8? 8>Ÿä3>Ÿä3>tur>tur>T6>T6>T6>T6½œ[’½œ[’½œ[’½œ[’>:áô=ñ€>H
->H
-½£:M½£:M½£:M½£:M<%Ho<%Ho<?×€<?×€=¾|k=¾|k>ß >ß =Bï¹=Bï¹<ÝõN<ÝõN=ÅP†=íW¢>‹P>‹P<·Às<·Às<·Às<·Às=Sö¢=Sö¢=‰6j=‰6j=N¿U=N¿U<
-Ôà<
-Ôà>]Y>]Y>]Y>]Y<Ø	w<Ø	w?$
-¨?}†?Œ  ?'c>‹ù>‹ù>Ÿä3>Ÿä3>tur>tur>T6>T6>T6>T6
