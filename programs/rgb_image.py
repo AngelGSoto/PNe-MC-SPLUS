@@ -89,7 +89,7 @@ file_ = cmd_args.source + ".ecsv"
 try:
     data = Table.read(ROOT_PATH / file_, format="ascii.ecsv")
 except FileNotFoundError:
-    file_ = args.source + ".dat"
+    file_ = cmd_args.source + ".dat"
     data = Table.read(ROOT_PATH / file_, format="ascii")
     
 if cmd_args.Object is not None:
@@ -102,9 +102,9 @@ else:
 # Connect
 conn = splusdata.connect('Luis', 'plutarco*80')
 for tab in data:
-    ra = tab["RA"]
-    dec = tab["DEC"]
-    Name = tab["SimbadName"]
+    ra = tab["RAJ2000"]
+    dec = tab["DEJ2000"]
+    Name = tab["recno"]
     # Getting the Fits image in the g, r and i-band
     hdu_g = conn.get_cut(ra, dec, 60, 'R')
     hdu_r = conn.get_cut(ra, dec, 60, 'F660')
