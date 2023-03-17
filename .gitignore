@@ -4,3 +4,6 @@ ReadMe
 /images/*.fits
 /images/*.fz
 /images/*rgb.png
+/images-emo/*.fits
+/images-emo/*.fz
+/images-emo/*rgb.png
