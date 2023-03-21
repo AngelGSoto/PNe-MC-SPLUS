@@ -32,52 +32,86 @@
   import numpy as np
   from astropy.table import Table, Column, MaskedColumn
   import astropy.coordinates as coord
-
-  arctab = Table.read('luis-programas/arcs-summary-unique.ecsv', 
-                      format='ascii.ecsv')
-  #                    fill_values=('--', np.nan) ).filled(np.nan)
-  outcols = ['Object']
-
-  arctab['coord'] = coord.SkyCoord(ra=arctab['RA'], dec=arctab['Dec'],
-                                   unit=('hourangle', 'deg'))
-
+  
+  # arctab = Table.read('luis-programas/arcs-summary-unique.ecsv', 
+  #                     format='ascii.ecsv')
+  # #                    fill_values=('--', np.nan) ).filled(np.nan)
+  # outcols = ['Object']
+  
+  # arctab['coord'] = coord.SkyCoord(ra=arctab['RA'], dec=arctab['Dec'],
+  #                                  unit=('hourangle', 'deg'))
+  
   catalogs = {'D': {'file': 'Four-PNe-SMC-2015.csv',
-                      'ID': 'ID'},
-              'HGS': {'file': 'Tab_2_J_A+A_561_A8_table1.csv',
-                       'ID': 'COUP'},
-              'GM': {'file': 'TAP_1_J_AJ_123_269_table.csv',
-                      'ID': 'MAX'},
-              'LSMC': {'file': 'TAP_3_J_A+A_456_451_PNe_onlySMC.csv',
-                      'ID': 'recno'},
-                                   }
-
+		      'ID': 'ID'},
+	      'HGS': {'file': 'Tab_2_J_A+A_561_A8_table1.csv',
+		       'ID': 'COUP'},
+	      'GM': {'file': 'TAP_1_J_AJ_123_269_table.csv',
+		      'ID': 'MAX'},
+	      'LSMC': {'file': 'TAP_3_J_A+A_456_451_PNe_onlySMC.csv',
+		      'ID': 'recno'},
+				   }
+  
+  tab_base = Table.read('Tab_2_J_A+A_561_A8_table1.ecsv', 
+		       format='ascii.ecsv')
+  tab_base['coord'] = coord.SkyCoord(ra=tab_base['RAJ2000'], dec=tab_base['DEJ2000'],
+				    unit=('deg', 'deg'))
+  # tab_four = Table.read('Four-PNe-SMC-2015.ecsv', 
+  # 		     format='ascii.ecsv')
+  # tab_four['coord'] = coord.SkyCoord(ra=tab_base['RA'], dec=tab_base['DEC'],
+  # 				  unit=('hourangle', 'deg'))
+  tab_269 = Table.read('TAP_1_J_AJ_123_269_table.ecsv', 
+		       format='ascii.ecsv')
+  tab_269['coord'] = coord.SkyCoord(ra=tab_269['RAJ2000'], dec=tab_269['DEJ2000'],
+				    unit=('deg', 'deg'))
+  tab_smc = Table.read('TAP_3_J_A+A_456_451_PNe_onlySMC.ecsv', 
+		       format='ascii.ecsv')
+  tab_smc['coord'] = coord.SkyCoord(ra=tab_smc['_RA'], dec=tab_smc['_DE'],
+				    unit=('deg', 'deg'))
+  
+  
   MAXSEP = 1.0
-  for cat, metadata in catalogs.items():
-      cattab = Table.read(metadata['file'])
-      cattab['coord'] = coord.SkyCoord(ra=cattab['RAJ2000'], dec=cattab['DEJ2000'],
-                                       unit=('deg', 'deg'))
-      sourcenames = []
+  for pn in tab_base:
       sourceseps = []
-      for arc in arctab:
-          seps = arc['coord'].separation(cattab['coord']).arcsec
-          iclosest = seps.argmin()
-          sourcenames.append('{} {}'.format(cat, cattab[iclosest][metadata['ID']]))
-          sourceseps.append(seps[iclosest])
-
-      mask = np.array(sourceseps) > MAXSEP
-      outcols.append(cat)
-      arctab.add_column(
-          MaskedColumn(name=cat, data=sourcenames, mask=mask, meta=metadata,
-                       description='Closest source from the {} catalog'.format(cat)))
-      outcols.append(cat + ' sep')
-      arctab.add_column(
-          MaskedColumn(name=cat + ' sep', data=sourceseps, mask=mask, format='{:.3f}'))
-
-
-
-  outtab = arctab[outcols]
-  outtab.write('arc-stellar-sources.ecsv', format='ascii.ecsv')
+      for pn1 in tab_269:
+	  seps = pn['coord'].separation(pn1['coord']).arcsec
+	  iclosest = seps.argmin()
+	  print(iclosest)
+	  # sourceseps.append(seps[iclosest])
+  
+      # mask = np.array(sourceseps) > MAXSEP
+  
+  
+  
+  # MAXSEP = 1.0
+  # for cat, metadata in catalogs.items():
+  #     cattab = Table.read(metadata['file'])
+  #     cattab['coord'] = coord.SkyCoord(ra=cattab['RAJ2000'], dec=cattab['DEJ2000'],
+  # 				     unit=('deg', 'deg'))
+  #     sourcenames = []
+  #     sourceseps = []
+  #     for arc in arctab:
+  # 	seps = arc['coord'].separation(cattab['coord']).arcsec
+  # 	iclosest = seps.argmin()
+  # 	sourcenames.append('{} {}'.format(cat, cattab[iclosest][metadata['ID']]))
+  # 	sourceseps.append(seps[iclosest])
+  
+  #     mask = np.array(sourceseps) > MAXSEP
+  #     outcols.append(cat)
+  #     arctab.add_column(
+  # 	MaskedColumn(name=cat, data=sourcenames, mask=mask, meta=metadata,
+  # 		     description='Closest source from the {} catalog'.format(cat)))
+  #     outcols.append(cat + ' sep')
+  #     arctab.add_column(
+  # 	MaskedColumn(name=cat + ' sep', data=sourceseps, mask=mask, format='{:.3f}'))
+  
+  
+  
+  # outtab = arctab[outcols]
+  # outtab.write('arc-stellar-sources.ecsv', format='ascii.ecsv')
 #+END_SRC
+
+#+RESULTS:
+: None
 
 
 

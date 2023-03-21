@@ -1,0 +1,29 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: No., datatype: int64}
+# - {name: Object Name, datatype: string}
+# - {name: RA, datatype: float64}
+# - {name: DEC, datatype: float64}
+# - {name: Type, datatype: string}
+# - {name: Velocity, datatype: float64}
+# - {name: Redshift, datatype: float64}
+# - {name: Redshift Flag, datatype: string}
+# - {name: References, datatype: int64}
+# - {name: Notes, datatype: float64}
+# - {name: Photometry Points, datatype: float64}
+# - {name: Positions, datatype: int64}
+# - {name: Redshift Points, datatype: float64}
+# - {name: Diameter Points, datatype: float64}
+# - {name: 'Associations ', datatype: float64}
+# - {name: Redshift-independent Distances, datatype: float64}
+# - {name: Classifications, datatype: float64}
+# - {name: Images, datatype: float64}
+# - {name: Spectra, datatype: float64}
+# schema: astropy-2.0
+No. "Object Name" RA DEC Type Velocity Redshift "Redshift Flag" References Notes "Photometry Points" Positions "Redshift Points" "Diameter Points" Associations "Redshift-independent Distances" Classifications Images Spectra
+1 "<a HREF=""#"" onclick=""getObjectSearchInfo(jQuery, 2, this); return false;"">Small Magellanic Cloud</a>" 13.186588 -72.828599 G 145.6 0.000486 UUN 3974 9.0 56.0 15 6.0 3.0 "" 294.0 285.0 100.0 ""
+2 "<a HREF=""#"" onclick=""getObjectSearchInfo(jQuery, 2, this); return false;"">SMC:[DPR2015] DPR1</a>" 13.608333 -72.5165 PN "" "" "" 1 "" "" 1 "" "" "" "" "" "" ""
+3 "<a HREF=""#"" onclick=""getObjectSearchInfo(jQuery, 2, this); return false;"">SMC:[DPR2015] DPR2</a>" 14.948333 -72.542056 PN "" "" "" 1 "" "" 1 "" "" "" "" "" "" ""
+4 "<a HREF=""#"" onclick=""getObjectSearchInfo(jQuery, 2, this); return false;"">SMC:[DPR2015] DPR3</a>" 15.73 -72.358889 PN "" "" "" 1 "" "" 1 "" "" "" "" "" "" ""
+5 "<a HREF=""#"" onclick=""getObjectSearchInfo(jQuery, 2, this); return false;"">SMC:[DPR2015] DPR4</a>" 16.125 -73.252917 PN "" "" "" 1 "" "" 1 "" "" "" "" "" "" ""
