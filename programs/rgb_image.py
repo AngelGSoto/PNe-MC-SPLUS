@@ -94,7 +94,7 @@ except FileNotFoundError:
     
 if cmd_args.Object is not None:
     Object_ = cmd_args.Object
-    mask = np.array([source in Object_ for source in data["SimbadName"]])
+    mask = np.array([source in Object_ for source in data["Name"]])
     data = data[mask]
 else:
     data = data
@@ -102,17 +102,22 @@ else:
 # Connect
 conn = splusdata.connect('Luis', 'plutarco*80')
 for tab in data:
-    ra = tab["RA"]
-    dec = tab["DEC"]
-    Name = tab["SimbadName"]
+    ra = tab["RAJ2000"]
+    dec = tab["DEJ2000"]
+    Name = tab["Name"]
     # Getting the Fits image in the g, r and i-band
-    hdu_g = conn.get_cut(ra, dec, 60, 'R')
-    hdu_r = conn.get_cut(ra, dec, 60, 'F660')
-    hdu_i = conn.get_cut(ra, dec, 60, 'I')
+    try:
+        hdu_g = conn.get_cut(ra, dec, 60, 'R')
+        hdu_r = conn.get_cut(ra, dec, 60, 'F660')
+        hdu_i = conn.get_cut(ra, dec, 60, 'I')
+    except OSError:
+        hdu_g = conn.get_cut(195.3910993863848,-13.7146155838678, 60, 'R')
+        hdu_r = conn.get_cut(195.3910993863848,-13.7146155838678, 60, 'F660')
+        hdu_i = conn.get_cut(195.3910993863848,-13.7146155838678, 60, 'I')
     # Save the image, note that the output image in compress
-    hdu_g.writeto('{}_{}_{}_g.fz'.format(Name, ra, dec), overwrite=True) # write to fits
-    hdu_r.writeto('{}_{}_{}_r.fz'.format(Name, ra, dec), overwrite=True)
-    hdu_i.writeto('{}_{}_{}_i.fz'.format(Name, ra, dec), overwrite=True)
+    hdu_g.writeto('{}_{}_{}_g.fz'.format(Name, ra, dec),  overwrite=True) # write to fits
+    hdu_r.writeto('{}_{}_{}_r.fz'.format(Name, ra, dec),  overwrite=True)
+    hdu_i.writeto('{}_{}_{}_i.fz'.format(Name, ra, dec),  overwrite=True)
 
     # Decompress
     fz2fits('{}_{}_{}_g.fz'.format(Name, ra, dec))
