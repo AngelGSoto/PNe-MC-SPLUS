@@ -106,7 +106,7 @@
   
   # Save
   tab_final.write("smc-final-2via.ecsv", format="ascii.ecsv", overwrite=True)
-  df = tab_final.to_pandas()
+  df = tab_final.to_pandas(
   df.to_csv("smc-final-2via.csv", index=False)
   
   
@@ -115,11 +115,116 @@
 #+RESULTS:
 : None
 
+#+name: splus-status
+| Name         | Splus Status |
+|--------------+--------------|
+| LHA 115-N 4  |            0 |
+| LHA 115-N 5  |            0 |
+| LHA 115-N 6  |            0 |
+| Jacoby SMC 1 |            0 |
+| [MA93] 44    |            0 |
+| LHA 115-N 7  |            0 |
+| MGPN SMC 6   |            0 |
+| [JD2002] 1   |            0 |
+| LIN 66       |            0 |
+| LIN 71       |            0 |
+| [JD2002] 2   |            0 |
+| [JD2002] 5   |            0 |
+| LHA 115-N 29 |            0 |
+| [JD2002] 6   |            0 |
+| Jacoby SMC 9 |            0 |
+| SMP SMC 12   |            0 |
+| [JD2002] 7   |            0 |
+| [M95] 3      |            0 |
+| LHA 115-N 38 |            0 |
+| LHA 115-N 40 |            0 |
+| [MA93] 406   |            0 |
+| LHA 115-N 43 |            0 |
+| [JD2002] 12  |            0 |
+| LHA 115-N 42 |            0 |
+| LHA 115-N 47 |            0 |
+| LIN 239      |            0 |
+| [MA93] 891   |            0 |
+| LIN 302      |            0 |
+| LIN 305      |            0 |
+| [JD2002] 17  |            0 |
+| LIN 343      |            0 |
+| LHA 115-N 68 |            0 |
+| LHA 115-N 70 |            0 |
+| [JD2002] 19  |            0 |
+| LIN 357      |            0 |
+| [JD2002] 20  |            0 |
+| [JD2002] 23  |            0 |
+| [MA93] 1438  |            0 |
+| LIN 430      |            0 |
+| [MA93] 1709  |            0 |
+| [MA93] 1714  |            0 |
+| SMP SMC 34   |            0 |
+| [MA93] 1762  |            0 |
+| LHA 115-N 87 |            0 |
+| LIN 536      |            0 |
+| 1            |            0 |
+| 3            |            0 |
+| 4            |            1?|
+| 5            |            0 |
+| 7            |            0 |
+| 8            |            0 |
+| 9            |            0 |
+| 10           |            0 |
+| 11           |            0 |
+| 12           |            0 |
+| 13           |            0 |
+| 14           |            0 |
+| 15           |            0 |
+| 16           |            0 |
+| 17           |            0 |
+| 18           |            0 |
+| 19           |            0 |
+| 20           |            0 |
+| 21           |            0 |
+| 22           |            0 |
+| 23           |            0 |
+| 25           |            0 |
+| 24           |            0 |
+| SMP_SMC_1    |            0 |
+| SMP_SMC_2    |            0 |
+| SMP_SMC_4    |            0 |
+| SMP_SMC_7    |            0 | 
+| SMP_SMC_9    |            0 |
+| SMP_SMC_10   |            0 |
+| SMP_SMC_11   |            0 |
+| SMP_SMC_17   |            0 |
+| SMP_SMC_20   |            0 |
+| SMP_SMC_22   |            0 |
+| SMP_SMC_32   |            0 |
+| MGPN_SMC_1   |            0 |
+| MGPN_SMC_10  |            0 |
+| MGPN_SMC_11  |            0 |
+| MGPN_SMC_12  |            0 |
+| MGPN_SMC_13  |           1? |
+| MGPN_SMC_2   |           1? |
+| MGPN_SMC_3   |            0 |
+| MGPN_SMC_5   |            0 |
+| MGPN_SMC_7   |            0 |
+| MGPN_SMC_8   |            0 |
+| [M95]_1 1    |            1 |
+| [M95]_2 0    |            0 |
+| LHA_115-N_8  |           0? |
+| DPR1         |            0 |
+| DPR2         |            0 |
+| DPR3         |            0 |
+| DPR4         |            0 |
+	     		   
+#+TBLFM: pepe		   
+|   |   |   |   |   |
+|---+---+---+---+---|
+|   |   |   |   |   |
 
 
-  
-  
-Abstract for FoF and meeting in Chile:
+#+header: :var table=orion-ll-objects
+#+BEGIN_SRC python :results list :return filelist
+
+* Abstract for FoF and meeting in Chile:
 
 #+BEGIN_SRC abstract
     S-PLUS: An atlas of integrated Halpha fluxes for planetary nebulae in the Magellanic Clouds
