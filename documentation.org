@@ -116,7 +116,7 @@
 
 ** TODO The final list SMC
    I added two column in the table, one indicates if the objet is in the SPLUS field.
-   And other one if the object have spectra.
+   And other one if the object has spectra.
 
 #+name: splus-status
 | Name         | Splus Status | Spectra |
@@ -231,8 +231,13 @@
   tab = Table.read("smc-final.ecsv", format = "ascii.ecsv")
   tab["SplusStatus"] = splus
   tab["Spectra"] = sp
-  print(tab)
   
+  #Save the tables updates
+  #ASCII
+  tab.write("smc-final-update.ecsv", format="ascii.ecsv", overwrite=True)
+  #PANDAS
+  df = tab.to_pandas()
+  df.to_csv("smc-final-update.csv", index=False)
   
 #+END_SRC
 
