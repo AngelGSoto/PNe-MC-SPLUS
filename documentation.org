@@ -243,6 +243,9 @@
 
 #+RESULTS:
 
+Then, the final [[smc-final-update.csv][table]] is almost done.
+Remenber a I have to check whats PN have spectra.
+
 ** Abstract for FoF and meeting in Chile:
 
     S-PLUS: An atlas of integrated Halpha fluxes for planetary nebulae in the Magellanic Clouds
