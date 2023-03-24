@@ -28,7 +28,7 @@
 :PROPERTIES:
 :ID:       LUIS
 :END:
-#+BEGIN_SRC python
+#+BEGIN_SRC python 
   import numpy as np
   from astropy.table import Table, Column, MaskedColumn, vstack
   import astropy.coordinates as coord
@@ -113,120 +113,160 @@
   #+END_SRC
 
 #+RESULTS:
-: None
+
+** TODO The final list SMC
+   I added two column in the table, one indicates if the objet is in the SPLUS field.
+   And other one if the object have spectra.
 
 #+name: splus-status
-| Name         | Splus Status |
-|--------------+--------------|
-| LHA 115-N 4  |            0 |
-| LHA 115-N 5  |            0 |
-| LHA 115-N 6  |            0 |
-| Jacoby SMC 1 |            0 |
-| [MA93] 44    |            0 |
-| LHA 115-N 7  |            0 |
-| MGPN SMC 6   |            0 |
-| [JD2002] 1   |            0 |
-| LIN 66       |            0 |
-| LIN 71       |            0 |
-| [JD2002] 2   |            0 |
-| [JD2002] 5   |            0 |
-| LHA 115-N 29 |            0 |
-| [JD2002] 6   |            0 |
-| Jacoby SMC 9 |            0 |
-| SMP SMC 12   |            0 |
-| [JD2002] 7   |            0 |
-| [M95] 3      |            0 |
-| LHA 115-N 38 |            0 |
-| LHA 115-N 40 |            0 |
-| [MA93] 406   |            0 |
-| LHA 115-N 43 |            0 |
-| [JD2002] 12  |            0 |
-| LHA 115-N 42 |            0 |
-| LHA 115-N 47 |            0 |
-| LIN 239      |            0 |
-| [MA93] 891   |            0 |
-| LIN 302      |            0 |
-| LIN 305      |            0 |
-| [JD2002] 17  |            0 |
-| LIN 343      |            0 |
-| LHA 115-N 68 |            0 |
-| LHA 115-N 70 |            0 |
-| [JD2002] 19  |            0 |
-| LIN 357      |            0 |
-| [JD2002] 20  |            0 |
-| [JD2002] 23  |            0 |
-| [MA93] 1438  |            0 |
-| LIN 430      |            0 |
-| [MA93] 1709  |            0 |
-| [MA93] 1714  |            0 |
-| SMP SMC 34   |            0 |
-| [MA93] 1762  |            0 |
-| LHA 115-N 87 |            0 |
-| LIN 536      |            0 |
-| 1            |            0 |
-| 3            |            0 |
-| 4            |            1?|
-| 5            |            0 |
-| 7            |            0 |
-| 8            |            0 |
-| 9            |            0 |
-| 10           |            0 |
-| 11           |            0 |
-| 12           |            0 |
-| 13           |            0 |
-| 14           |            0 |
-| 15           |            0 |
-| 16           |            0 |
-| 17           |            0 |
-| 18           |            0 |
-| 19           |            0 |
-| 20           |            0 |
-| 21           |            0 |
-| 22           |            0 |
-| 23           |            0 |
-| 25           |            0 |
-| 24           |            0 |
-| SMP_SMC_1    |            0 |
-| SMP_SMC_2    |            0 |
-| SMP_SMC_4    |            0 |
-| SMP_SMC_7    |            0 | 
-| SMP_SMC_9    |            0 |
-| SMP_SMC_10   |            0 |
-| SMP_SMC_11   |            0 |
-| SMP_SMC_17   |            0 |
-| SMP_SMC_20   |            0 |
-| SMP_SMC_22   |            0 |
-| SMP_SMC_32   |            0 |
-| MGPN_SMC_1   |            0 |
-| MGPN_SMC_10  |            0 |
-| MGPN_SMC_11  |            0 |
-| MGPN_SMC_12  |            0 |
-| MGPN_SMC_13  |           1? |
-| MGPN_SMC_2   |           1? |
-| MGPN_SMC_3   |            0 |
-| MGPN_SMC_5   |            0 |
-| MGPN_SMC_7   |            0 |
-| MGPN_SMC_8   |            0 |
-| [M95]_1 1    |            1 |
-| [M95]_2 0    |            0 |
-| LHA_115-N_8  |           0? |
-| DPR1         |            0 |
-| DPR2         |            0 |
-| DPR3         |            0 |
-| DPR4         |            0 |
-	     		   
-#+TBLFM: pepe		   
-|   |   |   |   |   |
-|---+---+---+---+---|
-|   |   |   |   |   |
+| Name         | Splus Status | Spectra |
+|--------------+--------------+---------|
+| LHA 115-N 4  |            0 | n       |
+| LHA 115-N 5  |            0 | n       |
+| LHA 115-N 6  |            0 |         |
+| Jacoby SMC 1 |            0 |         |
+| [MA93] 44    |            0 |         |
+| LHA 115-N 7  |            0 |         |
+| MGPN SMC 6   |            0 |         |
+| [JD2002] 1   |            0 |         |
+| LIN 66       |            0 |         |
+| LIN 71       |            0 |         |
+| [JD2002] 2   |            0 |         |
+| [JD2002] 5   |            0 |         |
+| LHA 115-N 29 |            0 |         |
+| [JD2002] 6   |            0 |         |
+| Jacoby SMC 9 |            0 |         |
+| SMP SMC 12   |            0 |         |
+| [JD2002] 7   |            0 |         |
+| [M95] 3      |            0 |         |
+| LHA 115-N 38 |            0 |         |
+| LHA 115-N 40 |            0 |         |
+| [MA93] 406   |            0 |         |
+| LHA 115-N 43 |            0 |         |
+| [JD2002] 12  |            0 |         |
+| LHA 115-N 42 |            0 |         |
+| LHA 115-N 47 |            0 |         |
+| LIN 239      |            0 |         |
+| [MA93] 891   |            0 |         |
+| LIN 302      |            0 |         |
+| LIN 305      |            0 |         |
+| [JD2002] 17  |            0 |         |
+| LIN 343      |            0 |         |
+| LHA 115-N 68 |            0 |         |
+| LHA 115-N 70 |            0 |         |
+| [JD2002] 19  |            0 |         |
+| LIN 357      |            0 |         |
+| [JD2002] 20  |            0 |         |
+| [JD2002] 23  |            0 |         |
+| [MA93] 1438  |            0 |         |
+| LIN 430      |            0 |         |
+| [MA93] 1709  |            0 |         |
+| [MA93] 1714  |            0 |         |
+| SMP SMC 34   |            0 |         |
+| [MA93] 1762  |            0 |         |
+| LHA 115-N 87 |            0 |         |
+| LIN 536      |            0 |         |
+| 1            |            0 |         |
+| 3            |            0 |         |
+| 4            |           1? |         |
+| 5            |            0 |         |
+| 7            |            0 |         |
+| 8            |            0 |         |
+| 9            |            0 |         |
+| 10           |            0 |         |
+| 11           |            0 |         |
+| 12           |            0 |         |
+| 13           |            0 |         |
+| 14           |            0 |         |
+| 15           |            0 |         |
+| 16           |            0 |         |
+| 17           |            0 |         |
+| 18           |            0 |         |
+| 19           |            0 |         |
+| 20           |            0 |         |
+| 21           |            0 |         |
+| 22           |            0 |         |
+| 23           |            0 |         |
+| 25           |            0 |         |
+| 24           |            0 |         |
+| SMP_SMC_1    |            0 |         |
+| SMP_SMC_2    |            0 |         |
+| SMP_SMC_4    |            0 |         |
+| SMP_SMC_7    |            0 |         |
+| SMP_SMC_9    |            0 |         |
+| SMP_SMC_10   |            0 |         |
+| SMP_SMC_11   |            0 |         |
+| SMP_SMC_17   |            0 |         |
+| SMP_SMC_20   |            0 |         |
+| SMP_SMC_22   |            0 |         |
+| SMP_SMC_32   |            0 | y       |
+| MGPN_SMC_1   |            0 |         |
+| MGPN_SMC_10  |            0 |         |
+| MGPN_SMC_11  |            0 |         |
+| MGPN_SMC_12  |            0 | y       |
+| MGPN_SMC_13  |           1? |         |
+| MGPN_SMC_2   |           1? |         |
+| MGPN_SMC_3   |            0 |         |
+| MGPN_SMC_5   |            0 |         |
+| MGPN_SMC_7   |            0 |         |
+| MGPN_SMC_8   |            0 |         |
+| [M95]_1 1    |            1 |         |
+| [M95]_2 0    |            0 |         |
+| LHA_115-N_8  |           0? |         |
+| DPR1         |            0 | y       |
+| DPR2         |            0 | y       |
+| DPR3         |            0 | y       |
+| DPR4         |            0 | y       |
+	     		   		   
 
+#+header: :var table=splus-status
+#+BEGIN_SRC python :results output
+  from astropy.table import Table
+  
+  splus, sp = [], []
+  for a, b, c in table:
+      splus.append(b)
+      sp.append(c)
+  
+  tab = Table.read("smc-final.ecsv", format = "ascii.ecsv")
+  tab["SplusStatus"] = splus
+  tab["Spectra"] = sp
+  print(tab)
+  
+  
+#+END_SRC
 
-#+header: :var table=orion-ll-objects
-#+BEGIN_SRC python :results list :return filelist
+#+RESULTS:
+#+begin_example
+    Name          RAJ2000            DEJ2000       SplusStatus Spectra
+------------ ------------------ ------------------ ----------- -------
+ LHA 115-N 4  8.591624999999999  -73.2226111111111           0       n
+ LHA 115-N 5 10.340333333333332 -72.75463888888888           0       n
+ LHA 115-N 6 10.365624999999998 -73.78513888888888           0        
+Jacoby SMC 1 10.617291666666665 -73.34863888888889           0        
+   [MA93] 44 10.789166666666665  -73.1343611111111           0        
+ LHA 115-N 7            10.8555 -72.63858333333333           0        
+  MGPN SMC 6 11.107208333333332 -73.86091666666665           0        
+  [JD2002] 1 11.300416666666663  -73.3161111111111           0        
+      LIN 66 11.336041666666665 -73.40286111111111           0        
+      LIN 71 11.364291666666665 -73.70402777777777           0        
+         ...                ...                ...         ...     ...
+  MGPN_SMC_3             7.3375          -72.23528           0        
+  MGPN_SMC_5           10.36375          -75.04778           0        
+  MGPN_SMC_7           11.92708          -74.80417           0        
+  MGPN_SMC_8           14.08208          -72.11667           0        
+     [M95]_1               2.18          -76.00278           1        
+     [M95]_2           11.50958          -74.14361           0        
+ LHA_115-N_8           10.80583          -72.92028          0?        
+        DPR1          13.608333           -72.5165           0        
+        DPR2          14.948333         -72.542056           0        
+        DPR3              15.73         -72.358889           0        
+        DPR4             16.125         -73.252917           0        
+Length = 96 rows
+#+end_example
 
-* Abstract for FoF and meeting in Chile:
+** Abstract for FoF and meeting in Chile:
 
-#+BEGIN_SRC abstract
     S-PLUS: An atlas of integrated Halpha fluxes for planetary nebulae in the Magellanic Clouds
 
     We present an atlas of integrated Halpha fluxes for planetary nebulae of the Magellanic Clouds (MC PNe)
@@ -242,4 +282,4 @@
     These results were compared with previous measurements from the literature. The preliminary results of
     this study are present in this contribution.
 
-#+END_SRC
+
