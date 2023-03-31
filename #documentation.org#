@@ -1,0 +1,268 @@
+#+TITLE: Planetary-nebulae-mc
+* Halpha emission of PNe in MC
+:PROPERTIES:
+:ID:       
+:END:
+
+* Motivation: 
+
+* Papers related:
+
+** SMC
+  - [[https://ui.adsabs.harvard.edu/abs/2015MNRAS.452.1402D/abstract][Drašković, D. et. al 2015]] paper in which are reported four new Planetary Nebula.
+    Are in the [[Four-PNe-SMC-2015.csv][table]].
+  - A [[https://ui.adsabs.harvard.edu/abs/2014A%26A...561A...8H/abstract][Paper]] about a search for central star in SMC PNe. The [[Tab_2_J_A+A_561_A8_table1.csv][table]] with the PNe.
+  - A [[https://ui.adsabs.harvard.edu/abs/2002AJ....123..269J/abstract][paper]] about A Survey for Very Faint Planetary Nebulae in the SMC. Here the [[TAP_1_J_AJ_123_269_table.csv][table]].
+  - A [[TAP_3_J_A+A_456_451_PNe_onlySMC][table]] with only the PN SMC from a catalog of both large and small [[TAP_3_J_A+A_456_451_PNe.csv][MC]].
+  - An old [[https://ui.adsabs.harvard.edu/abs/2000MNRAS.311..741M/abstract][paper]] about emission line objects in SMC. [[TAP_1_J_MNRAS_311_741_table1.csv][table]].
+
+** LMC
+  - [[https://ui.adsabs.harvard.edu/abs/2014MNRAS.438.2642R/abstract][Paper]] about PNe in LMC. The data with the PNe are in the [[Tab_7_J_MNRAS_438_2642_table1.csv][table]]. 
+     
+** Galaxy
+  - [[https://ui.adsabs.harvard.edu/abs/2013MNRAS.431....2F/abstract][Paper]] about integrated Hα fluxes for 1258 Galactic planetary nebulae.
+  - [[https://ui.adsabs.harvard.edu/abs/2016MNRAS.455.1459F/abstract][This]] is about the Hα surface brightness-radius relation:
+    a robust statistical distance indicator for planetary nebulae. 
+
+** Find the coincident between SMC catalogs
+:PROPERTIES:
+:ID:       LUIS
+:END:
+#+BEGIN_SRC python 
+  import numpy as np
+  from astropy.table import Table, Column, MaskedColumn, vstack
+  import astropy.coordinates as coord
+  
+  # arctab = Table.read('luis-programas/arcs-summary-unique.ecsv', 
+  #                     format='ascii.ecsv')
+  # #                    fill_values=('--', np.nan) ).filled(np.nan)
+  # outcols = ['Object']
+  
+  # arctab['coord'] = coord.SkyCoord(ra=arctab['RA'], dec=arctab['Dec'],
+  #                                  unit=('hourangle', 'deg'))
+  
+  catalogs = {'D': {'file': 'Four-PNe-SMC-2015.csv',
+		      'ID': 'ID'},
+	      'HGS': {'file': 'Tab_2_J_A+A_561_A8_table1.csv',
+		       'ID': 'COUP'},
+	      'GM': {'file': 'TAP_1_J_AJ_123_269_table.csv',
+		      'ID': 'MAX'},
+	      'LSMC': {'file': 'TAP_3_J_A+A_456_451_PNe_onlySMC.csv',
+		      'ID': 'recno'},
+				   }
+  
+  tab_base = Table.read('Tab_2_J_A+A_561_A8_table1.ecsv', 
+		       format='ascii.ecsv')
+  tab_base['coord'] = coord.SkyCoord(ra=tab_base['RAJ2000'], dec=tab_base['DEJ2000'],
+				    unit=('deg', 'deg'))
+  # tab_four = Table.read('Four-PNe-SMC-2015.ecsv', 
+  # 		     format='ascii.ecsv')
+  # tab_four['coord'] = coord.SkyCoord(ra=tab_base['RA'], dec=tab_base['DEC'],
+  # 				  unit=('hourangle', 'deg'))
+  tab_269 = Table.read('TAP_1_J_AJ_123_269_table.ecsv', 
+		       format='ascii.ecsv')
+  tab_269['coord'] = coord.SkyCoord(ra=tab_269['RAJ2000'], dec=tab_269['DEJ2000'],
+				    unit=('deg', 'deg'))
+  tab_smc = Table.read('TAP_3_J_A+A_456_451_PNe_onlySMC.ecsv', 
+		       format='ascii.ecsv')
+  tab_smc['coord'] = coord.SkyCoord(ra=tab_smc['_RA'], dec=tab_smc['_DE'],
+				    unit=('deg', 'deg'))
+  MAXSEP = 1.0
+  # Definition
+  def unmatch(tab, tab_base):
+      sourceseps = []
+      for pn in tab:
+	  seps = pn['coord'].separation(tab_base['coord']).arcsec
+	  iclosest = seps.argmin()
+	  sourceseps.append(seps[iclosest])
+      return sourceseps
+  
+  Col_base = ["Name", "RAJ2000", "DEJ2000"]
+  tab_base_ = tab_base[Col_base]
+  tab_269.rename_column('recno', 'Name')
+  tab_269_ = tab_269[Col_base]
+  tab_269_
+  tab_269_['Name'] = tab_269_['Name'].astype(str)
+  #mask
+  mask = np.array(unmatch(tab_269, tab_base)) >= MAXSEP
+  tab_269_unmatch = tab_269_[mask]
+  
+  # New table base + 269
+  T12_base = vstack([tab_base_, tab_269_unmatch])
+  T12_base['coord'] = coord.SkyCoord(ra=T12_base['RAJ2000'], dec=T12_base['DEJ2000'], unit=('deg', 'deg'))
+  
+  # Other unmacth
+  T12_base_ = T12_base[Col_base]
+  tab_smc.rename_column('_RA', 'RAJ2000')
+  tab_smc.rename_column('_DE', 'DEJ2000')
+  tab_smc_ = tab_smc[Col_base]
+  tab_smc_
+  
+  mask1 = np.array(unmatch(tab_smc, T12_base)) >= MAXSEP
+  tab_smc_unmatch = tab_smc_[mask1]
+  
+  # Final table
+  tab_final = vstack([T12_base_, tab_smc_unmatch])
+  
+  # Save
+  tab_final.write("smc-final-2via.ecsv", format="ascii.ecsv", overwrite=True)
+  df = tab_final.to_pandas(
+  df.to_csv("smc-final-2via.csv", index=False)
+  
+  
+  #+END_SRC
+
+#+RESULTS:
+
+** TODO The final list SMC
+   I added two column in the table, one indicates if the objet is in the SPLUS field.
+   And other one if the object has spectra.
+
+#+name: splus-status
+| Name         | Splus Status | Spectra |
+|--------------+--------------+---------|
+| LHA 115-N 4  |            0 | n       |
+| LHA 115-N 5  |            0 | n       |
+| LHA 115-N 6  |            0 |         |
+| Jacoby SMC 1 |            0 |         |
+| [MA93] 44    |            0 |         |
+| LHA 115-N 7  |            0 |         |
+| MGPN SMC 6   |            0 |         |
+| [JD2002] 1   |            0 |         |
+| LIN 66       |            0 |         |
+| LIN 71       |            0 |         |
+| [JD2002] 2   |            0 |         |
+| [JD2002] 5   |            0 |         |
+| LHA 115-N 29 |            0 |         |
+| [JD2002] 6   |            0 |         |
+| Jacoby SMC 9 |            0 |         |
+| SMP SMC 12   |            0 |         |
+| [JD2002] 7   |            0 |         |
+| [M95] 3      |            0 |         |
+| LHA 115-N 38 |            0 |         |
+| LHA 115-N 40 |            0 |         |
+| [MA93] 406   |            0 |         |
+| LHA 115-N 43 |            0 |         |
+| [JD2002] 12  |            0 |         |
+| LHA 115-N 42 |            0 |         |
+| LHA 115-N 47 |            0 |         |
+| LIN 239      |            0 |         |
+| [MA93] 891   |            0 |         |
+| LIN 302      |            0 |         |
+| LIN 305      |            0 |         |
+| [JD2002] 17  |            0 |         |
+| LIN 343      |            0 |         |
+| LHA 115-N 68 |            0 |         |
+| LHA 115-N 70 |            0 |         |
+| [JD2002] 19  |            0 |         |
+| LIN 357      |            0 |         |
+| [JD2002] 20  |            0 |         |
+| [JD2002] 23  |            0 |         |
+| [MA93] 1438  |            0 |         |
+| LIN 430      |            0 |         |
+| [MA93] 1709  |            0 |         |
+| [MA93] 1714  |            0 |         |
+| SMP SMC 34   |            0 |         |
+| [MA93] 1762  |            0 |         |
+| LHA 115-N 87 |            0 |         |
+| LIN 536      |            0 |         |
+| 1            |            0 |         |
+| 3            |            0 |         |
+| 4            |           1? |         |
+| 5            |            0 |         |
+| 7            |            0 |         |
+| 8            |            0 |         |
+| 9            |            0 |         |
+| 10           |            0 |         |
+| 11           |            0 |         |
+| 12           |            0 |         |
+| 13           |            0 |         |
+| 14           |            0 |         |
+| 15           |            0 |         |
+| 16           |            0 |         |
+| 17           |            0 |         |
+| 18           |            0 |         |
+| 19           |            0 |         |
+| 20           |            0 |         |
+| 21           |            0 |         |
+| 22           |            0 |         |
+| 23           |            0 |         |
+| 25           |            0 |         |
+| 24           |            0 |         |
+| SMP_SMC_1    |            0 |         |
+| SMP_SMC_2    |            0 |         |
+| SMP_SMC_4    |            0 |         |
+| SMP_SMC_7    |            0 |         |
+| SMP_SMC_9    |            0 |         |
+| SMP_SMC_10   |            0 |         |
+| SMP_SMC_11   |            0 |         |
+| SMP_SMC_17   |            0 |         |
+| SMP_SMC_20   |            0 |         |
+| SMP_SMC_22   |            0 |         |
+| SMP_SMC_32   |            0 | y       |
+| MGPN_SMC_1   |            0 |         |
+| MGPN_SMC_10  |            0 |         |
+| MGPN_SMC_11  |            0 |         |
+| MGPN_SMC_12  |            0 | y       |
+| MGPN_SMC_13  |           1? |         |
+| MGPN_SMC_2   |           1? |         |
+| MGPN_SMC_3   |            0 |         |
+| MGPN_SMC_5   |            0 |         |
+| MGPN_SMC_7   |            0 |         |
+| MGPN_SMC_8   |            0 |         |
+| [M95]_1      |            1 |         |
+| [M95]_2      |            0 |         |
+| LHA_115-N_8  |           0? |         |
+| DPR1         |            0 | y       |
+| DPR2         |            0 | y       |
+| DPR3         |            0 | y       |
+| DPR4         |            0 | y       |
+	     		   		   
+
+#+header: :var table=splus-status
+#+BEGIN_SRC python :results output
+  from astropy.table import Table
+  
+  splus, sp = [], []
+  for a, b, c in table:
+      splus.append(b)
+      sp.append(c)
+  
+  tab = Table.read("smc-final.ecsv", format = "ascii.ecsv")
+  tab["SplusStatus"] = splus
+  tab["Spectra"] = sp
+  
+  #Save the tables updates
+  #ASCII
+  tab.write("smc-final-update.ecsv", format="ascii.ecsv", overwrite=True)
+  #PANDAS
+  df = tab.to_pandas()
+  df.to_csv("smc-final-update.csv", index=False)
+  
+#+END_SRC
+
+#+RESULTS:
+
+Then, the final [[smc-final-update.csv][table]] is almost done.
+Remenber a I have to check whats PN have spectra.
+
+** Abstract for FoF and meeting in Chile:
+
+    S-PLUS: An atlas of integrated Halpha fluxes for planetary nebulae in the Magellanic Clouds
+
+    We present an atlas of integrated Halpha fluxes for planetary nebulae of the Magellanic Clouds (MC PNe)
+    with measurements from the Southern Photometric Local Universe Survey (S-PLUS), a 12 band (7 narrow and
+    5 broad) imaging survey that allows us to perform an spatial analysis of the Halpha emission.
+    Aperture photometry on the continuum-subtracted images was performed to extract Halpha + [N II] fluxes of
+    the MC PNe observed by S-PLUS. The dust attenuation and [N II] contribution was corrected with empirical relations.
+    Amongst its many applications, it can provide baseline data for photoionization and hydrodynamical modelling,
+    and allow better estimates of Zanstra temperatures for PN central stars with accurate optical photometry.
+    The weak nebular emission of the PNe were also analyzed to investigate the structure of the MC PNe further,
+    for which the Halpha surface brightness was estimated. The densities in the nebulae of the PNe were also
+    measured using the previously estimated surface brightness.
+    These results were compared with previous measurements from the literature. The preliminary results of
+    this study are present in this contribution.
+
+ 
+
+
