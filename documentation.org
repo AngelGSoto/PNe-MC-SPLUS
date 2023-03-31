@@ -15,6 +15,7 @@
   - A [[https://ui.adsabs.harvard.edu/abs/2002AJ....123..269J/abstract][paper]] about A Survey for Very Faint Planetary Nebulae in the SMC. Here the [[TAP_1_J_AJ_123_269_table.csv][table]].
   - A [[TAP_3_J_A+A_456_451_PNe_onlySMC][table]] with only the PN SMC from a catalog of both large and small [[TAP_3_J_A+A_456_451_PNe.csv][MC]].
   - An old [[https://ui.adsabs.harvard.edu/abs/2000MNRAS.311..741M/abstract][paper]] about emission line objects in SMC. [[TAP_1_J_MNRAS_311_741_table1.csv][table]].
+  - Now, I got the PSF photometry of 74 PNe from the 96 PNe. The table with the SPLUS photometry is [[smc-final-withsplus-mag.csv][here]].
 
 ** LMC
   - [[https://ui.adsabs.harvard.edu/abs/2014MNRAS.438.2642R/abstract][Paper]] about PNe in LMC. The data with the PNe are in the [[Tab_7_J_MNRAS_438_2642_table1.csv][table]]. 
