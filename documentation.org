@@ -266,3 +266,33 @@ Remenber a I have to check whats PN have spectra.
     this study are present in this contribution.
 
 
+* Products
+
+  Después de medir la emisión de H-alpha de las nebulosas planetarias utilizando fotometría de tres filtros,
+  hay varias cosas que puedes hacer con los datos. Algunas sugerencias son:
+
+    - Calcular la temperatura electrónica y la densidad electrónica de la nebulosa: Utilizando los datos
+    de fotometría de los tres filtros, puedes calcular la relación de intensidades de emisión de diferentes
+    líneas de emisión, como H-alpha y H-beta. Estas relaciones se utilizan para calcular la temperatura
+    electrónica de la nebulosa. La intensidad de la línea de emisión H-alpha también se puede utilizar
+    para calcular la densidad electrónica de la nebulosa.
+
+    - Analizar la estructura de la nebulosa: La intensidad de la emisión de H-alpha varía en diferentes
+    partes de la nebulosa planetaria, lo que puede indicar diferentes estructuras en la nebulosa,
+    como chorros o cascarones. Puedes utilizar los datos de fotometría para crear mapas de intensidad
+    y analizar la estructura de la nebulosa.
+
+    - Identificar estrellas centrales y determinar sus propiedades: En algunas nebulosas planetarias,
+    es posible identificar la estrella central que ioniza la nebulosa.
+    Utilizando los datos de fotometría de H-alpha y otros filtros, puedes determinar
+    las propiedades de la estrella central, como su temperatura y luminosidad.
+
+    - Comparar las propiedades de la nebulosa con modelos teóricos: Utilizando los
+    datos de fotometría y las propiedades calculadas de la nebulosa, puedes
+    comparar tus resultados con modelos teóricos de nebulosas planetarias.
+    Esto puede ayudar a entender mejor la formación y evolución de estas estructuras.
+
+En resumen, después de medir la emisión de H-alpha de las nebulosas planetarias utilizando
+fotometría de tres filtros, hay varias cosas que puedes hacer con los datos, como calcular
+la temperatura y densidad electrónica, analizar la estructura de la nebulosa, identificar
+estrellas centrales y comparar tus resultados con modelos teóricos.
