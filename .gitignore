@@ -16,3 +16,4 @@ misc.py
 /images-emo/*rgb.png
 /images-smc/*
 /__pycache__/
+/filter_curves/
