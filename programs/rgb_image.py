@@ -99,8 +99,11 @@ if cmd_args.Object is not None:
 else:
     data = data
 
-# Connect
-conn = splusdata.connect('Luis', 'plutarco*80')
+# Connecting with SPLUS database
+username = str(input("Login: "))
+password = getpass.getpass("Password: ")
+
+conn = splusdata.connect(username, password)
 for tab in data:
     ra = tab["RAJ2000"]
     dec = tab["DEJ2000"]
