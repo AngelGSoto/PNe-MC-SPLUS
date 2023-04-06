@@ -253,10 +253,10 @@ Remenber a I have to check whats PN have spectra.
 - Amanda found that the table with the PN with SPLUS photometry has duplicate
   objects. So, she made a new [[smc-final-withsplus-mag-updated.csv][one]].
 
-- Amanda created the Halpha for some PNe of the small Magellanic Cloud.
+- Amanda created the Halpha maps for some PNe of the small Magellanic Cloud.
   It is possible to access [[preliminary_maps_smc_withsplus_mag][here]].
 
-- I ran my version of the script to subtract Halpha emission. [[Halpha-emission][Here]] some examples.
+- I also ran my version of the script to subtract Halpha emission. [[Halpha-emission][Here]] some examples.
 
 ** Abstract for FoF and meeting in Chile:
 
