@@ -18,7 +18,9 @@
   - Now, I got the PSF photometry of 74 PNe from the 96 PNe. The table with the SPLUS photometry is [[smc-final-withsplus-mag.csv][here]].
 
 *** LMC
-  - [[https://ui.adsabs.harvard.edu/abs/2014MNRAS.438.2642R/abstract][Paper]] about PNe in LMC. The data with the PNe are in the [[Tab_7_J_MNRAS_438_2642_table1.csv][table]]. 
+  - [[https://ui.adsabs.harvard.edu/abs/2014MNRAS.438.2642R/abstract][Paper]] about PNe in LMC. The data with the PNe are in the [[Tab_7_J_MNRAS_438_2642_table1.csv][table]].
+  - Old [[https://ui.adsabs.harvard.edu/abs/2006MNRAS.373..521R/abstract][paper]] about catalog of PNe. Include two tables [[TAP_1_JMNRAS_373_521_table6_LMC_knownPN.csv][one]] with the known PN and [[TAP_1_JMNRAS_373_521_table7_LMC_newPN.csv][other]] with
+    new ones.
      
 *** Galaxy
   - [[https://ui.adsabs.harvard.edu/abs/2013MNRAS.431....2F/abstract][Paper]] about integrated Hα fluxes for 1258 Galactic planetary nebulae.
