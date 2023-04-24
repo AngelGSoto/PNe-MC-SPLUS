@@ -24,7 +24,7 @@
      
 *** Galaxy
   - [[https://ui.adsabs.harvard.edu/abs/2013MNRAS.431....2F/abstract][Paper]] about integrated Hα fluxes for 1258 Galactic planetary nebulae.
-  - [[https://ui.adsabs.harvard.edu/abs/2016MNRAS.455.1459F/abstract][This]] is about the Hα surface brightness-radius relation:
+  - [[https://ui.adsabs.harvard.edu/abs/2016MNRAS.455.1459F/abstract][This]] is about the H$alpha$ surface brightness-radius relation:
     a robust statistical distance indicator for planetary nebulae.
   - [[http://202.189.117.101:8999/gpne/dbMainPage.php][HASH]]. This is the most recent catalog of Galactic PNe. 
 
