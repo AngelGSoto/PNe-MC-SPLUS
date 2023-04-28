@@ -260,6 +260,8 @@ Remenber a I have to check whats PN have spectra.
 
 - I also ran my version of the script to subtract Halpha emission. [[Halpha-emission][Here]] some examples.
 
+- Now, Amanda, applied a filter (?), before to make the subtraction of the filter, [[halpha_imgs_withBWfilter][here]] the Halpha images.
+
 ** Abstract for FoF and meeting in Chile:
 
     S-PLUS: An atlas of integrated Halpha fluxes for planetary nebulae in the Magellanic Clouds
@@ -308,5 +310,6 @@ En resumen, después de medir la emisión de H-alpha de las nebulosas planetaria
 fotometría de tres filtros, hay varias cosas que puedes hacer con los datos, como calcular
 la temperatura y densidad electrónica, analizar la estructura de la nebulosa, identificar
 estrellas centrales y comparar tus resultados con modelos teóricos.
+
 
 
