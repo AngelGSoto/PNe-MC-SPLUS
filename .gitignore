@@ -17,6 +17,8 @@ misc.py
 /images-emo/*.fz
 /images-emo/*rgb.png
 /images-smc/*
+/PN_atlas_datapack_v1/*
+/STARS/*
 /__pycache__/
 /filter_curves/
 /Text/Poster/.~lock.FoF_SPLUS_MCPNe.odp#
