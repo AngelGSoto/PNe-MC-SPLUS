@@ -1,0 +1,51 @@
+\begin{thebibliography}{}
+\makeatletter
+\relax
+\def\mn@urlcharsother{\let\do\@makeother \do\$\do\&\do\#\do\^\do\_\do\%\do\~}
+\def\mn@doi{\begingroup\mn@urlcharsother \@ifnextchar [ {\mn@doi@}
+  {\mn@doi@[]}}
+\def\mn@doi@[#1]#2{\def\@tempa{#1}\ifx\@tempa\@empty \href
+  {http://dx.doi.org/#2} {doi:#2}\else \href {http://dx.doi.org/#2} {#1}\fi
+  \endgroup}
+\def\mn@eprint#1#2{\mn@eprint@#1:#2::\@nil}
+\def\mn@eprint@arXiv#1{\href {http://arxiv.org/abs/#1} {{\tt arXiv:#1}}}
+\def\mn@eprint@dblp#1{\href {http://dblp.uni-trier.de/rec/bibtex/#1.xml}
+  {dblp:#1}}
+\def\mn@eprint@#1:#2:#3:#4\@nil{\def\@tempa {#1}\def\@tempb {#2}\def\@tempc
+  {#3}\ifx \@tempc \@empty \let \@tempc \@tempb \let \@tempb \@tempa \fi \ifx
+  \@tempb \@empty \def\@tempb {arXiv}\fi \@ifundefined
+  {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
+  mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
+
+\bibitem[\protect\citeauthoryear{{Bolatto} et~al.,}{{Bolatto}
+  et~al.}{2007}]{Bolatto:2007}
+{Bolatto} A.~D.,  et~al., 2007, \mn@doi [\apj] {10.1086/509104}, \href
+  {https://ui.adsabs.harvard.edu/abs/2007ApJ...655..212B} {655, 212}
+
+\bibitem[\protect\citeauthoryear{{Fukugita}, {Ichikawa}, {Gunn}, {Doi},
+  {Shimasaku}  \& {Schneider}}{{Fukugita} et~al.}{1996}]{Fukugita:1996}
+{Fukugita} M.,  {Ichikawa} T.,  {Gunn} J.~E.,  {Doi} M.,  {Shimasaku} K.,
+  {Schneider} D.~P.,  1996, \mn@doi [\aj] {10.1086/117915}, \href
+  {http://adsabs.harvard.edu/abs/1996AJ....111.1748F} {111, 1748}
+
+\bibitem[\protect\citeauthoryear{{Mar{\'\i}n-Franch}
+  et~al.,}{{Mar{\'\i}n-Franch} et~al.}{2012}]{Marin-Franch:2012}
+{Mar{\'\i}n-Franch} A.,  et~al., 2012, in {Navarro} R.,  {Cunningham} C.~R.,
+  {Prieto} E.,  eds,  Society of Photo-Optical Instrumentation Engineers (SPIE)
+  Conference Series Vol. 8450, Modern Technologies in Space- and Ground-based
+  Telescopes and Instrumentation II. p. 84503S, \mn@doi{10.1117/12.925430}
+
+\bibitem[\protect\citeauthoryear{{Mendes de Oliveira} et~al.,}{{Mendes de
+  Oliveira} et~al.}{2019}]{Mendes:2019}
+{Mendes de Oliveira} C.,  et~al., 2019, \mn@doi [\mnras]
+  {10.1093/mnras/stz1985}, \href
+  {https://ui.adsabs.harvard.edu/abs/2019MNRAS.489..241M} {489, 241}
+
+\bibitem[\protect\citeauthoryear{{Stanimirovi{\'c}}, {Staveley-Smith}  \&
+  {Jones}}{{Stanimirovi{\'c}} et~al.}{2004}]{Stanimirovi:2004}
+{Stanimirovi{\'c}} S.,  {Staveley-Smith} L.,   {Jones} P.~A.,  2004, \mn@doi
+  [\apj] {10.1086/381869}, \href
+  {https://ui.adsabs.harvard.edu/abs/2004ApJ...604..176S} {604, 176}
+
+\makeatother
+\end{thebibliography}

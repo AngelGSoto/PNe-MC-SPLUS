@@ -279,7 +279,38 @@ Remenber a I have to check whats PN have spectra.
     These results were compared with previous measurements from the literature. The preliminary results of
     this study are present in this contribution.
 
+* Extinction correction
 
+For PNe the extinction correction could be done by ratio lines:
+
+ For example, commonly used ratio lines are Hα/Hβ, Hγ/Hβ, or Hδ/Hβ. These lines are sensitive 
+to the reddening caused by interstellar dust.
+
+examples of calibration equations commonly used to estimate the color excess (E(B-V)) in planetary nebulae based on ratio line measurements:
+
+    + Hα/Hβ ratio calibration:
+    E(B-V) = 2.22 * log10((Hα/Hβ)observed / (Hα/Hβ)intrinsic)
+
+    + Hγ/Hβ ratio calibration:
+    E(B-V) = 1.06 * log10((Hγ/Hβ)observed / (Hγ/Hβ)intrinsic)
+
+    + Hδ/Hβ ratio calibration:
+    E(B-V) = 0.73 * log10((Hδ/Hβ)observed / (Hδ/Hβ)intrinsic)
+
+These equations illustrate the general form of the calibration equations. However, please note 
+that the specific coefficients and ratios used in these equations may vary depending on the calibration 
+study and the particular set of ratio lines being employed.
+
+It's important to consult the relevant literature or research papers for 
+the specific calibration equations that are appropriate for your study and the ratio lines you have selected. 
+These publications often provide detailed information about the calibration methodology, sample selection, 
+and uncertainties associated with the calibration.
+
+By applying the appropriate calibration equation to your observed line flux ratios, 
+you can estimate the color excess (E(B-V)) for your planetary nebula based on those ratio measurements.
+
++ A [[https://ui.adsabs.harvard.edu/abs/2013MNRAS.436..604R/abstract][paper]] sobre correction extinctions of LMC.
+ 
 * Products
 
   Después de medir la emisión de H-alpha de las nebulosas planetarias utilizando fotometría de tres filtros,
