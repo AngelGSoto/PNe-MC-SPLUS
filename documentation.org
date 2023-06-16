@@ -309,7 +309,8 @@ and uncertainties associated with the calibration.
 By applying the appropriate calibration equation to your observed line flux ratios, 
 you can estimate the color excess (E(B-V)) for your planetary nebula based on those ratio measurements.
 
-+ A [[https://ui.adsabs.harvard.edu/abs/2013MNRAS.436..604R/abstract][paper]] sobre correction extinctions of LMC.
++ A [[https://ui.adsabs.harvard.edu/abs/2013MNRAS.436..604R/abstract][paper]] sobre correction extinctions of LMC. 
++
  
 * Products
 
