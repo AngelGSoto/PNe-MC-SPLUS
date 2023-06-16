@@ -17,7 +17,10 @@ misc.py
 /images-emo/*.fz
 /images-emo/*rgb.png
 /images-smc/*
-/PN_atlas_datapack_v1/*
+/PN_atlas_datapack_v1/*.fits
+/PN_atlas_datapack_v1/*.fits
+/PN_atlas_datapack_v1/1D/*
+/PN_atlas_datapack_v1/2D/*
 /STARS/*
 /__pycache__/
 /filter_curves/
