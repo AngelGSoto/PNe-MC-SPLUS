@@ -197,15 +197,15 @@ for fitname, wl_, FLUX_, wl_filter, mag_arr_, mag_err_arr_, repeated_color_, rep
     ax.set(ylim=[-0.01e-12, 0.07e-12])
     #plt.ylim(ymin=-50.0,ymax=200)
     ax.set(xlabel='Wavelength $(\AA)$')
-    ax.set(ylabel=r'F$(\mathrm{10^{-15} erg\ s^{-1} cm^{-2} \AA^{-1}})$')
+    ax.set(ylabel=r'F$(\mathrm{erg\ s^{-1} cm^{-2} \AA^{-1}})$')
 
-    ax.plot(wl_, FLUX_, c = "gray", linewidth=1.3, alpha=0.6, zorder=5)
+    ax.plot(wl_, FLUX_, c = "gray", linewidth=2.3, alpha=0.6, zorder=5)
     F = (10**(-(mag_arr_ + 2.41) / 2.5)) / wl_filter**2
     # Crea un nuevo gráfico
         #print(wl_filter, mag_err_arr_)
         # #F *= factor
     for i in range(len(mag_arr_)):
-        ax.scatter(wl_filter[i], F[i], c = repeated_color_[i], s=80, marker = repeated_marker_[i], zorder=4)#[]
+        ax.scatter(wl_filter[i], F[i], c = repeated_color_[i], s=250, marker = repeated_marker_[i], zorder=4)#[]
         ax.errorbar(wl_filter[i], F[i], yerr=mag_err_arr_[i], marker='.', fmt='.', color=repeated_color_[i], ecolor=repeated_color_[i], elinewidth=3.9, markeredgewidth=3.2, capsize=10)
     # ax.legend()
     plt.tight_layout()
