@@ -8,6 +8,8 @@
 
 ** Papers related:
 
+   This is a [[https://ui.adsabs.harvard.edu/abs/2006ApJS..167..201S/abstract][paper]] about HST imgaes of PN in the MC.
+
 *** SMC
   - [[https://ui.adsabs.harvard.edu/abs/2015MNRAS.452.1402D/abstract][Drašković, D. et. al 2015]] paper in which are reported four new Planetary Nebula.
     Are in the [[Four-PNe-SMC-2015.csv][table]].
@@ -17,10 +19,19 @@
   - An old [[https://ui.adsabs.harvard.edu/abs/2000MNRAS.311..741M/abstract][paper]] about emission line objects in SMC. [[TAP_1_J_MNRAS_311_741_table1.csv][table]].
   - Now, I got the PSF photometry of 74 PNe from the 96 PNe. The table with the SPLUS photometry is [[smc-final-withsplus-mag.csv][here]].
 
+**** PN observed by HST
+
+  - SMC-SMP 2 8.16179 -71.69986
+  - SMC-SMP 3 8.59137 -73.22264
+  - SMC-SMP 15 12.78071 -73.96047
+  - SMC-SMP 16 12.86312 -72.43658
+  - SMC-SMP 28 21.04921 -74.04239
+
 *** LMC
   - [[https://ui.adsabs.harvard.edu/abs/2014MNRAS.438.2642R/abstract][Paper]] about PNe in LMC. The data with the PNe are in the [[Tab_7_J_MNRAS_438_2642_table1.csv][table]].
   - Old [[https://ui.adsabs.harvard.edu/abs/2006MNRAS.373..521R/abstract][paper]] about catalog of PNe. Include two tables [[TAP_1_JMNRAS_373_521_table6_LMC_knownPN.csv][one]] with the known PN and [[TAP_1_JMNRAS_373_521_table7_LMC_newPN.csv][other]] with
     new ones.
+  - This [[https://ui.adsabs.harvard.edu/abs/2002ApJ...575..178S/abstract][paper]] shows a study of PN in LMC.
      
 *** Galaxy
   - [[https://ui.adsabs.harvard.edu/abs/2013MNRAS.431....2F/abstract][Paper]] about integrated Hα fluxes for 1258 Galactic planetary nebulae.
