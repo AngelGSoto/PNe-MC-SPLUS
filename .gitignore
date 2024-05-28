@@ -7,6 +7,10 @@ get-halpha.py
 method_3filter_l.py
 splus_estimator_l.py
 misc.py
+/Text/*
+/rmsc3.26b/*
+/Proceding/*
+/925_v2/*
 /images/*.fits
 /Halpha-emission/*.fits
 /images-withmag/*.fits

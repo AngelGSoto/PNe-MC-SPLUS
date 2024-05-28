@@ -1,0 +1,91 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: Field, datatype: string}
+# - {name: ID, datatype: string}
+# - {name: RA_r, datatype: float32}
+# - {name: DEC_r, datatype: float32}
+# - {name: X_r, datatype: float32}
+# - {name: Y_r, datatype: float32}
+# - {name: s2n_r_psf, datatype: float32}
+# - {name: s2n_J0660_psf, datatype: float32}
+# - {name: s2n_i_psf, datatype: float32}
+# - {name: CLASS_STAR_r, datatype: int32}
+# - {name: CLASS_STAR_i, datatype: int32}
+# - {name: u_psf, datatype: float32}
+# - {name: J0378_psf, datatype: float32}
+# - {name: J0395_psf, datatype: float32}
+# - {name: J0410_psf, datatype: float32}
+# - {name: J0430_psf, datatype: float32}
+# - {name: g_psf, datatype: float32}
+# - {name: J0515_psf, datatype: float32}
+# - {name: r_psf, datatype: float32}
+# - {name: J0660_psf, datatype: float32}
+# - {name: i_psf, datatype: float32}
+# - {name: J0861_psf, datatype: float32}
+# - {name: z_psf, datatype: float32}
+# - {name: e_u_psf, datatype: float32}
+# - {name: e_J0378_psf, datatype: float32}
+# - {name: e_J0395_psf, datatype: float32}
+# - {name: e_J0410_psf, datatype: float32}
+# - {name: e_J0430_psf, datatype: float32}
+# - {name: e_g_psf, datatype: float32}
+# - {name: e_J0515_psf, datatype: float32}
+# - {name: e_r_psf, datatype: float32}
+# - {name: e_J0660_psf, datatype: float32}
+# - {name: e_i_psf, datatype: float32}
+# - {name: e_J0861_psf, datatype: float32}
+# - {name: e_z_psf, datatype: float32}
+# - {name: Name, datatype: string}
+# - {name: RA, datatype: float64}
+# - {name: DEC, datatype: float64}
+# - {name: VLT, datatype: string}
+# meta: !!omap
+# - {TCOMM1: description}
+# - {TCOMM2: description}
+# - {TCOMM3: description}
+# - {TCOMM4: description}
+# - {TCOMM5: description}
+# - {TCOMM6: description}
+# - {TCOMM7: description}
+# - {TCOMM8: description}
+# - {TCOMM9: description}
+# - {TCOMM10: description}
+# - {TCOMM11: description}
+# - {TCOMM12: description}
+# - {TCOMM13: description}
+# - {TCOMM14: description}
+# - {TCOMM15: description}
+# - {TCOMM16: description}
+# - {TCOMM17: description}
+# - {TCOMM18: description}
+# - {TCOMM19: description}
+# - {TCOMM20: description}
+# - {TCOMM21: description}
+# - {TCOMM22: description}
+# - {TCOMM23: description}
+# - {TCOMM24: description}
+# - {TCOMM25: description}
+# - {TCOMM26: description}
+# - {TCOMM27: description}
+# - {TCOMM28: description}
+# - {TCOMM29: description}
+# - {TCOMM30: description}
+# - {TCOMM31: description}
+# - {TCOMM32: description}
+# - {TCOMM33: description}
+# - {TCOMM34: description}
+# - {TCOMM35: description}
+# - {DATE-HDU: '2023-03-31T18:57:00'}
+# - {STILVERS: 3.3-2}
+# - {STILCLAS: uk.ac.starlink.fits.FitsTableWriter}
+# schema: astropy-2.0
+Field ID RA_r DEC_r X_r Y_r s2n_r_psf s2n_J0660_psf s2n_i_psf CLASS_STAR_r CLASS_STAR_i u_psf J0378_psf J0395_psf J0410_psf J0430_psf g_psf J0515_psf r_psf J0660_psf i_psf J0861_psf z_psf e_u_psf e_J0378_psf e_J0395_psf e_J0410_psf e_J0430_psf e_g_psf e_J0515_psf e_r_psf e_J0660_psf e_i_psf e_J0861_psf e_z_psf Name RA DEC VLT
+MC0113 iDR4_3_MC0113_0054489 5.9942446 -73.63444 3181.63 4345.25 83.30769 77.35714 49.227272 1 1 17.251163 17.105164 17.257164 17.378136 17.145136 16.684135 17.621136 16.516462 14.423462 17.291142 17.543327 17.427328 0.015 0.018 0.023 0.023 0.02 0.01 0.022 0.013 0.014 0.022 0.031 0.036 SMP_SMC_1 5.99433 -73.63444 SMC-SMP-1_spectrum.fits
+MC0093 iDR4_3_MC0093_0237121 8.161891 -71.699936 6994.68 8892.81 47.086956 40.11111 27.075 1 1 17.3517 17.1917 17.1497 17.813404 17.207405 15.886405 18.230404 16.655298 14.493298 17.816986 18.105898 17.760899 0.021 0.023 0.029 0.026 0.019 0.014 0.035 0.023 0.027 0.04 0.051 0.046 SMP_SMC_2 8.161891 -71.699936 SMC-SMP-2_spectrum.fits
+MC0093 iDR4_3_MC0093_0642632 10.8555 -72.6386 1659.86 2694.75 43.32 99.0 99.0 1 99 99.0 99.0 99.0 99.0 17.210802 99.0 99.0 16.798944 99.0 99.0 99.0 99.0 99.0 99.0 99.0 99.0 0.027 99.0 99.0 0.025 99.0 99.0 99.0 99.0 LHA_115-N_7 10.8555 -72.63858333333333 SMC-SMP-8_spectrum.fits
+MC0115 iDR4_3_MC0115_1053289 12.465124 -73.73931 8699.1 3636.45 63.705883 99.0 99.0 1 99 99.0 99.0 99.0 99.0 16.76471 99.0 99.0 16.223202 99.0 99.0 17.59402 99.0 99.0 99.0 99.0 99.0 0.028 99.0 99.0 0.017 99.0 99.0 0.05 99.0 LHA_115-N_38 12.465208333333331 -73.73927777777777 SMC-SMP-13_spectrum.fits
+MC0115 iDR4_3_MC0115_0671498 12.992196 -73.34207 7786.33 6260.07 57.0 99.0 99.0 1 99 99.0 99.0 99.0 99.0 99.0 99.0 99.0 16.209866 99.0 99.0 99.0 99.0 99.0 99.0 99.0 99.0 99.0 99.0 99.0 0.019 99.0 99.0 99.0 99.0 LHA_115-N_47 12.992208333333332 -73.34202777777777 SMC-SMP-18_spectrum.fits
+MC0048 iDR4_3_MC0048_0001615 14.022394 -70.323906 9471.2 1394.05 57.0 108.3 29.27027 1 1 16.820835 16.844835 16.772835 17.136332 16.602331 15.804331 15.889331 16.009321 13.832322 17.07649 17.369806 99.0 0.026 0.032 0.037 0.048 0.036 0.024 0.023 0.019 0.01 0.037 0.061 99.0 SMP_SMC_20 14.02233 -70.32383 SMC-SMP-20_spectrum.fits
+MC0094 iDR4_3_MC0094_0183910 14.817113 -72.03332 2504.92 6682.69 90.25 90.25 51.57143 1 1 16.621494 16.335764 16.487764 17.019743 16.738071 16.115662 17.176662 16.28639 14.224391 17.327219 17.663378 17.368378 0.013 0.014 0.021 0.021 0.013 0.01 0.021 0.012 0.012 0.021 0.027 0.031 LHA_115-N_70 14.817166666666663 -72.03333333333332 SMC-SMP-24_spectrum.fits
+MC0094 iDR4_3_MC0094_0213041 14.918745 -71.63757 2231.52 9267.12 57.0 67.6875 24.066668 1 1 18.491213 18.786482 18.266481 18.991203 18.444532 17.854122 18.581123 17.718863 15.567862 19.033247 19.197638 19.052637 0.024 0.046 0.049 0.062 0.034 0.018 0.036 0.019 0.016 0.045 0.076 0.065 LIN_357 14.918791666666664 -71.63752777777776 SMC-SMP-25_spectrum.fits

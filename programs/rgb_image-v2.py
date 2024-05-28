@@ -19,7 +19,6 @@ from skimage.restoration import estimate_sigma
 from astropy.io import fits
 from astropy.table import Table
 import matplotlib
-import argparse
 import os
 from pathlib import Path
 ROOT_PATH = Path("..")
