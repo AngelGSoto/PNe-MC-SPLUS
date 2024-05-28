@@ -290,6 +290,7 @@ Remenber a I have to check whats PN have spectra.
     These results were compared with previous measurements from the literature. The preliminary results of
     this study are present in this contribution.
 
+<<<<<<< HEAD
 * Extinction correction
 
 For PNe the extinction correction could be done by ratio lines:
@@ -323,6 +324,9 @@ you can estimate the color excess (E(B-V)) for your planetary nebula based on th
 + A [[https://ui.adsabs.harvard.edu/abs/2013MNRAS.436..604R/abstract][paper]] sobre correction extinctions of LMC. 
 +
  
+=======
+    
+>>>>>>> 9340040bfc85c396585b2c042387d33a265fc133
 * Products
 
   Después de medir la emisión de H-alpha de las nebulosas planetarias utilizando fotometría de tres filtros,
