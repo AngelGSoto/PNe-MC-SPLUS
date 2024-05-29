@@ -32,6 +32,214 @@
   - Old [[https://ui.adsabs.harvard.edu/abs/2006MNRAS.373..521R/abstract][paper]] about catalog of PNe. Include two tables [[TAP_1_JMNRAS_373_521_table6_LMC_knownPN.csv][one]] with the known PN and [[TAP_1_JMNRAS_373_521_table7_LMC_newPN.csv][other]] with
     new ones.
   - This [[https://ui.adsabs.harvard.edu/abs/2002ApJ...575..178S/abstract][paper]] shows a study of PN in LMC.
+
+recent catlog of PNe:
+
+J/MNRAS/438/2642    LMC PNe multiwavelength photometry       (Reid, 2014)
+================================================================================
+A multiwavelength analysis of planetary nebulae in the Large Magellanic Cloud.
+    Reid W.A.
+   <Mon. Not. R. Astron. Soc., 438, 2642-2663 (2014)>
+   =2014MNRAS.438.2642R    (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: Magellanic Clouds ; Planetary nebulae ; Photometry, UBVRI ;
+              Photometry, infrared
+Keywords: surveys - stars: evolution - planetary nebulae: general -
+          galaxies: luminosity function, mass function - Magellanic Clouds
+          infrared: general
+
+Abstract:
+    This paper examines, compares and plots optical, near- and
+    mid-infrared (MIR) photometric data for 605 planetary nebulae (PNe) in
+    the Large Magellanic Cloud (LMC). With the aid of multiwavelength
+    surveys such as the Spitzer legacy programme Surveying the
+    Agents of a Galaxy's Evolution, the Two Micron All Sky Survey and the
+    Magellanic Cloud Photometric Survey, plots have been constructed to
+    expose the relative contributions from molecular hydrogen, polycyclic
+    aromatic hydrocarbons, forbidden emission lines, warm dust continuum
+    and stellar emission at various bands. Besides identifying trends,
+    these plots have helped to reveal PN mimics including six previously
+    known PNe in the outer LMC which are re-classified as other object
+    types. Together with continuing follow-up optical observations, the
+    data have enabled a substantial reduction in the number of PNe
+    previously tagged as 'likely' and 'possible'. The total number of LMC
+    PNe is adjusted to 715 but with a greater degree of confidence in
+    regard to classification. In each colour-colour plot, the more highly
+    evolved LMC PNe are highlighted for comparison with younger, brighter
+    PNe. The faintest and most evolved PNe typically cluster in areas of
+    colour-colour space occupied by ordinary stars. Possible reasons for
+    the wide disparity in infrared colour-colour ratios, such as evolution
+    and dust composition, are presented for evaluation. A correlation is
+    found between the optical luminosity of PNe, emission-line ratios and
+    the MIR dust luminosity at various bands. Luminosity functions using
+    the four Infrared Array Camera and Multiband Imaging Photometer of
+    Spitzer (MIPS) [24] bands are directly compared, revealing an
+    increasing accumulation of PNe within the brightest two magnitudes at
+    longer wavelengths. A correlation is also found between the MIPS [24]
+    band and the [OIII] 5007 and H{beta} fluxes.
+
+Description:
+    Using the 2MASS 6x catalogue for the LMC (Cutri et al. 2003, Cat. II/246;
+    2012, Cat. VII/233), magnitudes were obtained for 274 PNe in J, 269 in
+    H and 263 in Ks.
+
+    To increase the number of detections available for comparison,
+    magnitudes were also obtained from the InfraRed Survey Facility (IRSF)
+    Magellanic Clouds Point Source Catalogue (Kato et al., 2007, Cat. II/288).
+
+    The 3.6, 4.5, 5.8 and 8um bands were obtained with the IRAC on board
+    Spitzer. This study used the archival data from the Spitzer legacy
+    programme SAGE (Meixner et al., 2006, Cat. J/AJ/132/2268) which mapped
+    the central 7x7deg^2^ area of the LMC.
+
+    The MIPS data were also obtained from both the Hora et al. (2008, Cat.
+    J/AJ/135/726) and Gruendl & Chu (2009, Cat. J/ApJS/184/172) studies.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName      Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe            80        .   This file
+table1.dat       172      605   Magnitude data for each LMC PNe
+table2.dat       165       76  *A list of RP objects originally published as
+                                 possible PNe 
+table3.dat       235       28  *The same as for Table 2 but for RP objects
+                                 originally given a probability of 'likely'
+                                 and 'true' 
+--------------------------------------------------------------------------------
+Note on table2.dat: which have now been re-classified or had their status 
+  changed following new high-resolution, higher S/N spectral observations 
+  and multiwavelength analysis.
+Note on table3.dat: which have now been re-classified or had their status 
+  as PNe changed following new high-resolution, higher S/N spectral 
+  observations and multiwavelength analysis.
+--------------------------------------------------------------------------------
+
+See also:
+    II/246        : 2MASS All-Sky Catalog of Point Sources (Cutri+ 2003)
+    II/288        : IRSF Magellanic Clouds Point Source Catalog (Kato+ 2007)
+   VII/233        : The 2MASS Extended sources (IPAC/UMass, 2003-2006)
+   J/AJ/128/1606  : Magellanic Clouds Photometric Survey: LMC (Zaritsky+, 2004)
+   J/AJ/132/2268  : SAGE calibration stars (Meixner+, 2006)
+   J/AJ/135/726   : Spitzer SAGE observations of LMC PNe (Hora+, 2008)
+   J/ApJS/184/172 : High- and intermediate-mass YSOs in the LMC (Gruendl+, 2009)
+   J/A+A/531/A157 : LMC planetary nebulae (VMC Survey II) (Miszalski+, 2011)
+
+Byte-by-byte Description of file: table1.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1- 12  A12   ---     Name      LMC PNe common name
+  14- 19  F6.3  mag     Umag      ?=- MPCS survey U magnitude
+  21- 25  F5.3  mag   e_Umag      ? rms uncertainty on Umag
+  27- 32  F6.3  mag     Bmag      ?=- MPCS survey B magnitude
+  34- 38  F5.3  mag   e_Bmag      ? rms uncertainty on Bmag
+      39  A1    ---   n_Bmag      [c] Note on Bmag
+  40- 45  F6.3  mag     Vmag      ?=- MPCS survey V magnitude
+  47- 51  F5.3  mag   e_Vmag      ? rms uncertainty on Vmag
+  53- 58  F6.3  mag     Imag      ?=- MPCS survey I magnitude
+  60- 64  F5.3  mag   e_Imag      ? rms uncertainty on Imag
+  66- 71  F6.3  mag     Jmag      ?=- IRSF J magnitude
+  73- 77  F5.3  mag   e_Jmag      ? rms uncertainty on Jmag
+  78- 79  A2    ---   n_Jmag      [?*d ] Note on Jmag (1)
+  81- 86  F6.3  mag     Hmag      ?=- IRSF H magnitude
+  88- 92  F5.3  mag   e_Hmag      ? rms uncertainty on Hmag
+      93  A1    ---   n_Hmag      [?] Note on Hmag
+  94- 99  F6.3  mag     Kmag      ?=- IRSF K magnitude
+ 101-105  F5.3  mag   e_Kmag      ? rms uncertainty on Kmag
+     106  A1    ---   n_Kmag      [?*d] Note on Kmag (1)
+ 108-113  F6.3  mag     [3.6]     ?=- IRAC 3.6um magnitude
+ 115-119  F5.3  mag   e_[3.6]     ? rms uncertainty on [3.6]
+     120  A1    ---   n_[3.6]     [cd] Note on [3.6] (1)
+ 121-126  F6.3  mag     [4.5]     ?=- IRAC 4.5um  magnitude
+ 128-132  F5.3  mag   e_[4.5]     ? rms uncertainty on [4.5]
+     133  A1    ---   n_[4.5]     [cd] Note on [4.5] (1)
+ 134-139  F6.3  mag     [5.8]     ?=- IRAC 5.8um magnitude
+ 141-145  F5.3  mag   e_[5.8]     ? rms uncertainty on [5.8]
+     146  A1    ---   n_[5.8]     [d] Note on [5.8] (1)
+ 147-152  F6.3  mag     [8.0]     ?=- IRAC 8um magnitude
+ 154-158  F5.3  mag   e_[8.0]     ? rms uncertainty on [8.0]
+     159  A1    ---   n_[8.0]     [cd] Note on [8.0] (1)
+ 160-165  F6.3  mag     [24]      ?=- MPIS 24um magnitude
+ 167-171  F5.3  mag   e_[24]      ? rms uncertainty on [24]
+     172  A1    ---   n_[24]      [cd] Note on [24] (1)
+--------------------------------------------------------------------------------
+Note (1): Notes as follows:
+    c = magnitude for a point source taken from the SAGE catalogue
+    d = magnitude taken from Miszalski et al (2011, Cat. J/A+A/531/A157)
+    ? = uncertainty flag
+    * = 2MASS magnitude
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table2.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1-  4  I4    ---     RP        RP number, [RP2006] NNNN in Simbad
+   6-  7  I2    h       RAh       Right ascesnion (J2000)
+   9- 10  I2    min     RAm       Right ascesnion (J2000)
+  12- 16  F5.2  s       RAs       Right ascesnion (J2000)
+      18  A1    ---     DE-       Declination sign (J2000)
+  19- 20  I2    deg     DEd       Declination (J2000)
+  22- 23  I2    arcmin  DEm       Declination (J2000)
+  25- 29  F5.2  arcsec  DEs       Declination (J2000)
+  31- 40  A10   ---     ClassNew  New classificaiton (G1)
+      42  A1    ---     ProbNew   New classification probability (G2)
+  44-165  A122  ---     Reason    Reason (G3)
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table3.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1-  4  I4    ---     RP        RP number, [RP2006] NNNN in Simbad
+   6-  7  I2    h       RAh       Right ascesnion (J2000)
+   9- 10  I2    min     RAm       Right ascesnion (J2000)
+  12- 16  F5.2  s       RAs       Right ascesnion (J2000)
+      18  A1    ---     DE-       Declination sign (J2000)
+  19- 20  I2    deg     DEd       Declination (J2000)
+  22- 23  I2    arcmin  DEm       Declination (J2000)
+  25- 29  F5.2  arcsec  DEs       Declination (J2000)
+      31  A1    ---     Prob2006  2006 classification probability (G2)
+  33- 43  A11   ---     ClassNew  New classificaiton (G1)
+      45  A1    ---     ProbNew   New classification probability (G2)
+  47-235  A189  ---     Reason    Reason (G3)
+--------------------------------------------------------------------------------
+
+Global notes:
+Note (G1): Classification code as follows:
+   ELS  = emission-line star
+   ELS* = identification indicates that the object was re-classified as an 
+           ELS in Reid & Parker (2012, Cat. J/MNRAS/425/355)
+   LTS  = late-type star
+   LPV  = long-period variable
+   YSO  = young stellar object
+   EmO  = emission object
+   PN   = planetary nebula
+   SNR  = supernova remnant
+Note (G2): Classification probability code as follows:
+   K = known
+   T = true
+   L = likely
+   P = possible.
+Note (G3):
+   (1) refers to analysis using a 2.3m telescope optical spectrum,
+   (2) refers to analysis using follow-up observations on 2dF,
+   'IR' refers to false infrared colours at 3.6 and 4.5um and 5.8 and 8um
+         indicating HII regions or hot stars,
+   'Radio' strong radio source (>3mJy). Please see the text (Section 5)
+            for more details.
+--------------------------------------------------------------------------------
+
+History:
+    From electronic version of the journal
+
+================================================================================
+(End)                                      Patricia Vannier [CDS]    24-Jul-2017
+
+The table is: 
+
+: TAP_3_J_MNRAS_438_2642_table1.csv
      
 *** Galaxy
   - [[https://ui.adsabs.harvard.edu/abs/2013MNRAS.431....2F/abstract][Paper]] about integrated Hα fluxes for 1258 Galactic planetary nebulae.
