@@ -566,5 +566,4 @@ fotometría de tres filtros, hay varias cosas que puedes hacer con los datos, co
 la temperatura y densidad electrónica, analizar la estructura de la nebulosa, identificar
 estrellas centrales y comparar tus resultados con modelos teóricos.
 
-
-
+* Spectra Information
